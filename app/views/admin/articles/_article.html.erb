@@ -1,0 +1,6 @@
+<tr>
+  <td><%= article.title %></td>
+  <td><%= strip_tags(article.content).try(:first, 50) %></td>
+  <td><%= article.status %></td>
+  <td><%= link_to '編集', edit_admin_article_path(article.id), class: 'btn btn-primary' %></td>
+</tr>

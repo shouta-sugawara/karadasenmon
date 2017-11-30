@@ -1,0 +1,143 @@
+@import 'loader';
+
+.top-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 270px;
+  padding-top: 0 !important;
+
+  .top-image-layer {
+    background-color:	rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+
+    .top-image-title {
+      margin: 20px 20px;
+      font-weight: normal;
+    }
+
+    .title-en {
+      margin-left: 15px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#diagnosis {
+
+  .top-image {
+    background-image: asset-url('diagnosis.jpg') !important;
+  }
+
+  .time-table {
+    table {
+      font-size: 18px;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 20px;
+
+
+      th, td {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 1px solid $lightgray;
+      }
+
+      @include bp(mobile) {
+        font-size: 13px;
+        width: 100%;
+
+        th,td {
+          padding: 0 5px !important;
+        }
+      }
+
+      thead {
+        background: $themeColorLight;
+
+        th {
+          border-right-color: white;
+        }
+        td {
+          border-color: $lightgray white;
+        }
+        td:last-child {
+          border-color: $lightgray $lightgray $lightgray white;
+        }
+      }
+
+      tbody {
+
+      }
+    }
+  }
+
+  .flow-of-treatment {
+    background: rgba(67,135,233,.1);
+  }
+
+  .price {
+    @include bp(mobile) {
+      text-align: center;
+    }
+
+    text-align: center;
+
+    table {
+      width: 80%;
+      margin: auto;
+
+      @include bp(mobile) {
+        margin: auto;
+      }
+
+      tr {
+        border: 1px solid #C9C9C9;
+
+        th {
+          text-align: center;
+          background: $lightGrayBg;
+          font-weight: bold;
+          font-size: 15px;
+          vertical-align: middle;
+          padding: 12px;
+          border-bottom: 1px solid #C9C9C9;
+          white-space: nowrap;
+          width: 50%;
+        }
+
+        td {
+          text-align: center;
+          padding: 12px;
+          border-bottom: 1px solid #C9C9C9;
+          font-size: 15px;
+          font-weight: bold;
+          vertical-align: top;
+          overflow: hidden;
+          width: 50%;
+        }
+
+        @include bp(mobile) {
+          th,td {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .visit-treatment {
+    background: rgba(255,255,0,.1);
+  }
+
+  .feature {
+    background-image: asset-url('hospitality.jpg') !important;
+    background-position: center;
+
+    .layer-transparent {
+      background-color:		rgba(255,255,255,0.5);
+    }
+  }
+}

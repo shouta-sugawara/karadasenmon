@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render 'layouts/common' %>
+  <script src="//cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= render 'application/favicon' %>
+</head>
+<body>
+  <%= render 'shared/admin_header' %>
+  <div id="admin-container" class='container'>
+    <%= yield %>
+  </div>
+</body>
+</html>

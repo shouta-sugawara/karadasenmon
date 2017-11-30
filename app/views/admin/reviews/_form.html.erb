@@ -1,0 +1,34 @@
+<%= form_for @review, url: path, method: method, class: 'form-standard' do |f| %>
+  <div class='field'>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control', id:'title'  %>
+  </div>
+  <div class='field'>
+    <%= f.label :content, '内容' %>
+    <% unless @review.new_record? %>
+      <%= hidden_field_tag 'review_id', @review.id.to_s %>
+      <% if @review.draft? %>
+        <%= f.submit "プレビューを見る", class: 'btn btn-primary' %>
+      <% else %>
+        <%= f.submit "公開された記事を見る", class: 'btn btn-primary' %>
+      <% end %>
+    <% end %>
+    <div class='form-status-holder' style='float: right;'></div>
+    <%= f.text_area :content, id:'froala_editor' %>
+    <p id="content-counter"></p>
+  </div>
+  <div class='field'>
+    <%= f.label :status, 'ステータス' %>
+    <%= f.select :status, Review.statuses.keys.to_a, {}, class: 'form-control', id:'status' %>
+  </div>
+  <div class='field'>
+    <%= f.submit "保存する", class: 'btn btn-primary' %>
+    <%= link_to '削除', "/admin/reviews/#{@review.id}", method: :delete, class: 'btn btn-danger', style: 'float: right', data: {confirm: '本当に記事を削除しますか？'} %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $(function() {
+    $('#froala_editor').froalaEditor();
+  });
+</script>

@@ -1,0 +1,66 @@
+@import 'loader';
+
+#traffic-accident {
+
+  .top-image {
+    background-image: asset-url('traffic-accident.jpg') !important;
+  }
+
+  .price {
+    table {
+      font-size: 18px;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 20px;
+
+      td {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 1px solid $lightgray;
+        width: 50%;
+      }
+
+      @include bp(mobile) {
+
+        td {
+          padding: 10px 10px !important;
+        }
+      }
+
+      thead {
+        background: $lightGrayBg;
+
+        td {
+          border-color: $lightgray;
+        }
+      }
+    }
+  }
+
+  .flow-of-accident {
+    background: rgba(255,255,0,.1);
+  }
+
+  .suggest-treatment {
+    background-image: asset-url('muchiuchi.jpg') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .layer-transparent {
+      background-color:		rgba(255,255,255,0.5);
+    }
+  }
+
+  .car-insurance {
+    background-image: asset-url('handshake-before-car.png') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .layer-transparent {
+      background-color:		rgba(255,255,255,0.5);
+    }
+  }
+}

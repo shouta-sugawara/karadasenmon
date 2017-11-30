@@ -1,0 +1,27 @@
+<%= form_tag admin_users_path, method: :post, class: 'form-inline' do %>
+  <%= label_tag :email, 'メール' %>
+  <%= text_field :user, :email, class: "form-control input-sm" %>
+  <%= label_tag :password, 'パスワード' %>
+  <%= password_field :user, :password, class: "form-control input-sm" %>
+  <%= label_tag :role, 'role' %>
+  <%= select :user, :role, User.roles.keys.to_a, {}, class: "form-control select" %>
+  <%= label_tag :name, '名前' %>
+  <%= text_field :user, :name, class: "form-control input-sm" %>
+  <%= submit_tag "作成", class: 'btn btn-sm btn-primary' %>
+<% end %>
+
+<table class='table table-striped table-hover table-condensed'>
+  <thead>
+    <tr>
+      <th>メール</th>
+      <th>ユーザーID</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |a| %>
+      <%= render a %>
+    <% end %>
+  </tbody>
+</table>

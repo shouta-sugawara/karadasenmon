@@ -1,0 +1,216 @@
+@import 'loader';
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid $lightgray;
+  z-index: 999;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  .header-content {
+    max-width: 960px;
+    margin: auto;
+
+    @include bp(mobile) {
+      width: 100%;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+
+    #site-logo {
+      margin: 0;
+      line-height: 2;
+      font-family: "Limelight", cursive;
+
+      @include bp(mobile) {
+        margin-right: auto;
+      }
+
+      img {
+        height: 80px;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+
+        @include bp(mobile) {
+          height: 70px;
+        }
+      }
+
+      a {
+        font-size: 30px;
+        color: black;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+
+        @include bp(mobile) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    nav {
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        padding-top: 20px;
+        display: -webkit-flex;
+        display: flex;
+        list-style: none;
+        @include bp(pc) {
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+        }
+
+        li {
+          width: 25%;
+          text-align: center;
+          border-left: 1px solid $lightgray;
+          padding-bottom: 5px;
+        }
+
+        li:last-child{
+          border-right: 1px solid $lightgray;
+        }
+
+        li:nth-child(2) {
+          a, .english {
+            color: #CE4F4F;
+          }
+        }
+      }
+
+      a {
+        font-size: 17px;
+        color: $navGrayText;
+      }
+
+      .english {
+        color: #333333;
+        font-size: 11px;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      .nav_icon {
+        display: none;
+        width: 36px;
+        height: 28px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .nav_icon span {
+        background: black;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+      }
+
+      .nav_icon span:nth-of-type(1) {
+        top: 0;
+      }
+
+      .nav_icon span:nth-of-type(2) {
+        top: 12px;
+      }
+
+      .nav_icon span:nth-of-type(3) {
+        bottom: 0;
+      }
+
+      .nav_icon.active span:nth-of-type(1) {
+        -webkit-transform: translateY(12px) rotate(-45deg);
+        transform: translateY(12px) rotate(-45deg);
+      }
+
+      .nav_icon.active span:nth-of-type(2) {
+        display: none;
+      }
+
+      .nav_icon.active span:nth-of-type(3) {
+        -webkit-transform: translateY(-12px) rotate(45deg);
+        transform: translateY(-12px) rotate(45deg);
+      }
+
+      @include bp(mobile) {
+        a{
+          padding: 0px;
+        }
+
+        .english {
+          display: none;
+        }
+
+        ul{
+          padding-top: 0;
+          background-color: rgba(0, 0, 0, .8);
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          position: absolute;
+          top: 77px;
+          left: 0px;
+          height: auto;
+          width: 100%;
+          z-index: -1;
+          display: none;
+        }
+        li{
+          margin: auto;
+          text-align: center;
+        }
+
+        .nav_icon,
+        .nav_icon span {
+            display: inline-block;
+            transition: all .4s;
+            box-sizing: border-box;
+            z-index: 999;
+        }
+      }
+    }
+  }
+}
+
+@include bp(pc) {
+  #header.smaller {
+   background-color: rgba(255,255,255,0.85);
+
+   #site-logo {
+      img {
+        height: 60px;
+      }
+
+      a {
+        font-size: 24px;
+        color: black;
+      }
+    }
+
+    nav ul {
+      padding-top: 0;
+    }
+
+    .english {
+      display: none;
+    }
+  }
+}

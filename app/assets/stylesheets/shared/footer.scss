@@ -1,0 +1,38 @@
+@import 'loader';
+
+#footer {
+
+  .clinics {
+    .clinic {
+      iframe {
+        width: 100%;
+      }
+
+      table {
+        width: 100%;
+        tr {
+          th {
+            background-color: $lightGrayBg;
+          }
+
+          th,td {
+            padding: 15px;
+            border-color: $lightgray white;
+            border-bottom: 1px solid $lightgray;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 12px;
+    margin-top: 1px solid $lightgray;
+    color: $navGrayText;
+    p {
+      margin: 0;
+    }
+  }
+}

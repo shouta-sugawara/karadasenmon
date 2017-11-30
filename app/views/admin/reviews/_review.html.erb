@@ -1,0 +1,6 @@
+<tr>
+  <td><%= review.title %></td>
+  <td><%= strip_tags(review.content).try(:first, 50) %></td>
+  <td><%= review.status %></td>
+  <td><%= link_to '編集', edit_admin_review_path(review.id), class: 'btn btn-primary' %></td>
+</tr>
