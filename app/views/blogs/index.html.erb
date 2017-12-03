@@ -1,0 +1,32 @@
+<div id="blog-index">
+
+  <div class="container top-title">
+    <h2 class="title-ja">ブログ</h2>
+    <p class="title-en">BLOG</p>
+  </div>
+
+  <div class="blogs">
+    <div class="container">
+      <div class="row">
+        <h2 class="highlight-h2">新着ブログ一覧</h2>
+        <% if @blogs.present? %>
+
+         <% @blogs.each do |b| %>
+           <div class="blog">
+            <p class="date"><%= @date_today %>(最終更新日)</p>
+
+            <h2><%= link_to b.title, blog_path(b.id) %></h2>
+
+            <div class="thumb-img">
+              <%= image_tag b.image %>
+            </div>
+           </div>
+         <% end %>
+
+        <% else %>
+          <p>記事が見つかりませんでした。</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

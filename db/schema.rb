@@ -13,10 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20171130143050) do
 
-  create_table "articles", force: :cascade do |t|
+  create_table "blogs", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.text     "content",    limit: 65535
     t.integer  "status",     limit: 4,     default: 0, null: false
+    t.string   "image",      limit: 255
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
   end
@@ -34,7 +35,7 @@ ActiveRecord::Schema.define(version: 20171130143050) do
     t.string   "title",      limit: 255
     t.text     "content",    limit: 65535
     t.integer  "status",     limit: 4,     default: 0, null: false
-    t.string   "image_url",  limit: 255
+    t.string   "image",      limit: 255
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
   end

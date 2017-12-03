@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'recruitment', to: 'welcome#recruitment'
   get 'about', to: 'welcome#about'
 
-  resources :articles
+  resources :blogs
   resources :reviews
 
   namespace :admin do
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     }
     root to: "users#index"
     resources :users
-    resources :articles
+    resources :blogs
     resources :reviews
     resources :notifications
   end

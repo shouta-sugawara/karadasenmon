@@ -1,0 +1,29 @@
+<%= form_for @blog, url: path, method: method, class: 'form-standard' do |f| %>
+  <div class='field'>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title, class: 'form-control', id:'title'  %>
+  </div>
+  <div class='field'>
+    <%= f.label :image, 'アイキャッチ画像URL' %>
+    <%= f.file_field :image %>
+  </div>
+  <div class='field'>
+    <%= f.label :content, '内容' %>
+    <%= f.text_area :content, id:'froala_editor' %>
+  </div>
+  <div class='field'>
+    <%= f.label :status, 'ステータス' %>
+    <%= f.select :status, Blog.statuses.keys.to_a, {}, class: 'form-control', id:'status' %>
+  </div>
+  <div class='field'>
+    <%= f.submit "保存する", class: 'btn btn-primary' %>
+    <%= link_to '削除', "/admin/blogs/#{@blog.id}", method: :delete, class: 'btn btn-danger', style: 'float: right', data: {confirm: '本当に記事を削除しますか？'} %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $(function() {
+    $('#froala_editor').froalaEditor();
+  });
+  $(".fr-box .fr-toolbar .fr-dropdown-menu[aria-labelledby='paragraphFormat-1'] ul li:eq(2)").css({ display: 'none'});
+</script>

@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :article do
-    
+  factory :blog do
+
   end
 end

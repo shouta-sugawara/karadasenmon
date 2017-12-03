@@ -4,7 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.string :title
       t.text :content
       t.integer :status, null: false, default: 0
-      t.string :image_url
+      t.string :image
 
       t.timestamps null: false
     end
