@@ -18,7 +18,7 @@ BASHRC
       upload! bashrc, "/tmp/rbenvrc"
       execute "cat /tmp/rbenvrc ~/.bashrc > ~/.bashrc.tmp"
       execute "mv ~/.bashrc.tmp ~/.bashrc"
-      execute %q{export PATH="$HOME/.rbenv/bin:$PATH"}
+      execute %q{export PATH="/home/.rbenv/bin:$PATH"}
       execute %q{eval "$(rbenv init -)"}
       execute "rbenv #{fetch(:rbenv_bootstrap)}"
       execute "rbenv install #{fetch(:ruby_version)} -s"
