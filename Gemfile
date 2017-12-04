@@ -31,12 +31,12 @@ gem 'will_paginate-bootstrap'
 gem 'bootstrap-will_paginate'
 gem 'material_icons'
 
-gem 'capistrano'
+gem 'capistrano', '~> 3.4.0'
 gem 'capistrano-rbenv'
 gem 'capistrano-rails'
 gem 'capistrano-bundler'
 gem 'capistrano-npm'
-gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
+gem 'capistrano-sidekiq', '= 0.10.0'
 
 gem 'sitemap_generator'
 gem 'whenever', :require => false

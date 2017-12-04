@@ -18,8 +18,13 @@ Rails.application.routes.draw do
       confirmations: "users/confirmations"
     }
     root to: "users#index"
+    
     resources :users
-    resources :blogs
+    resources :blogs do
+      collection do
+        post :upload_image
+      end
+    end
     resources :reviews
     resources :notifications
   end

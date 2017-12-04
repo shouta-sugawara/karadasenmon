@@ -23,7 +23,10 @@
 
 <script type="text/javascript">
   $(function() {
-    $('#froala_editor').froalaEditor();
-  });
-  $(".fr-box .fr-toolbar .fr-dropdown-menu[aria-labelledby='paragraphFormat-1'] ul li:eq(2)").css({ display: 'none'});
+      $('#froala_editor').froalaEditor({
+        // Set the image upload URL.
+        imageUploadURL: '/admin/blogs/upload_image',
+        imageUploadMethod: 'POST'
+      })
+    });
 </script>
