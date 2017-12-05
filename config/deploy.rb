@@ -35,7 +35,6 @@ namespace :deploy do
       execute :sudo, "apt-get -y install mysql-client"
     end
   end
-  desc "start"
   after "deploy:install", "monit:install"
   after "deploy:install", "node:install"
   after "deploy:install", "rbenv:install"

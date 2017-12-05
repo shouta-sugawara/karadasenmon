@@ -28,7 +28,11 @@
 <% end %>
 
 <script type="text/javascript">
-  $(function() {
-    $('#froala_editor').froalaEditor();
-  });
+$(function() {
+  $('#froala_editor').froalaEditor({
+    // Set the image upload URL.
+    imageUploadURL: '/admin/reviews/upload_image',
+    imageUploadMethod: 'POST'
+  })
+});
 </script>

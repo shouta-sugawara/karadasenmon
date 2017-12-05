@@ -43,6 +43,24 @@ class Admin::ReviewsController < Admin::BaseController
     redirect_to admin_reviews_path
   end
 
+  def upload_image
+    if params[:file]
+      FileUtils::mkdir_p(Rails.root.join("public/uploads/froala"))
+      ext = File.extname(params[:file].original_filename)
+      if IMAGE_EXT.include?(ext)
+        file_name = "#{SecureRandom.urlsafe_base64}#{ext}"
+        path = Rails.root.join("public/uploads/froala/", file_name)
+        File.open(path, "wb") {|f| f.write(params[:file].read)}
+        view_file = Rails.env.production? ? DOMAIN + "uploads/froala/" + file_name : DOMAIN + "uploads/froala/" + file_name
+        render :json => {:link => view_file}.to_json
+      else
+        render :text => {:link => nil}.to_json
+      end
+    else
+      render :text => {:link => nil}.to_json
+    end
+  end
+
   private
   def set_review
     @review = Review.find(params[:id])

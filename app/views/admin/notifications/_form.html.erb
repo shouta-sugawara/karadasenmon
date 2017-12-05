@@ -18,6 +18,10 @@
     <p id="content-counter"></p>
   </div>
   <div class='field'>
+    <%= f.label :has_content, '詳細ページ' %>
+    <%= f.select :has_content, [["詳細ページあり", true],["詳細ページなし", false]], {}, class: 'form-control', id:'status' %>
+  </div>
+  <div class='field'>
     <%= f.label :status, 'ステータス' %>
     <%= f.select :status, Notification.statuses.keys.to_a, {}, class: 'form-control', id:'status' %>
   </div>
@@ -28,7 +32,11 @@
 <% end %>
 
 <script type="text/javascript">
-  $(function() {
-    $('#froala_editor').froalaEditor();
-  });
+$(function() {
+  $('#froala_editor').froalaEditor({
+    // Set the image upload URL.
+    imageUploadURL: '/admin/notifications/upload_image',
+    imageUploadMethod: 'POST'
+  })
+});
 </script>

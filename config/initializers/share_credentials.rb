@@ -1,0 +1,1 @@
+DOMAIN = "karadasenmon.com"
