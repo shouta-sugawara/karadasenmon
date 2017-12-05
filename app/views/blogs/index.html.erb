@@ -10,19 +10,18 @@
       <div class="row">
         <h2 class="highlight-h2">新着ブログ一覧</h2>
         <% if @blogs.present? %>
-
-         <% @blogs.each do |b| %>
-           <div class="blog">
-            <p class="date"><%= @date_today %>(最終更新日)</p>
-
-            <h2><%= link_to b.title, blog_path(b.id) %></h2>
-
-            <div class="thumb-img">
-              <%= image_tag b.image %>
-            </div>
-           </div>
-         <% end %>
-
+          <ul>
+            <% @blogs.each do |b| %>
+              <li class="blog">
+                <%= link_to '', blog_path(b.id), style: "background-image: url(#{b.image})", class: 'blog-thumb'%>
+                <div class="blog-content">
+                  <h3 class="blog-title"><%= link_to (b.title.length > 26 ? b.title[0, 26] + "..." : b.title), blog_path(b.id) %></h3>
+                  <p class="blog-description"><%= strip_tags(b.content).length > 39 ? strip_tags(b.content)[0, 39] + "..." : strip_tags(b.content) %></p>
+                  <p class="blog-date"><%= b.updated_at.strftime("%Y/%m/%d") %></p>
+                </div>
+              </li>
+            <% end %>
+          </ul>
         <% else %>
           <p>記事が見つかりませんでした。</p>
         <% end %>

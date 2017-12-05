@@ -44,7 +44,18 @@
   <div class="notifications">
     <div class="container">
       <div class="row">
-
+        <h2>お知らせ</h2>
+        <div class="box">
+          <ul>
+            <% @notifications.each do |n| %>
+             <% if n.has_content %>
+              <li><span class="date"><%= n.updated_at.strftime("%Y/%m/%d") %></span><%= link_to n.title, notification_path(n.id), class: "notification-title" %></li>
+             <% else %>
+              <li><span class="date"><%= n.updated_at.strftime("%Y/%m/%d") %></span><span class="notification-title"><%= n.title %></span></li>
+             <% end %>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

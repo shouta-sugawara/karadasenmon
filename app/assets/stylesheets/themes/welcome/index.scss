@@ -57,6 +57,42 @@
     }
   }
 
+  .notifications {
+    align-content: center;
+    padding-bottom: 20px;
+
+    h2 {
+      margin-left: 5%;
+      padding-left: 10px;
+      font-size: 24px;
+      color: $graytext;
+      border-left: 3px solid #4990E2;
+    }
+    .box {
+      margin: auto;
+      border: 1px solid $lightgray;
+      overflow: scroll;
+      width: 90%;
+      height: 200px;
+      -webkit-overflow-scrolling: touch;
+
+      ul {
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+
+        li {
+          padding: 5px;
+          border-bottom: 1px dotted $lightgray;
+
+          .notification-title {
+            padding-left: 15px;
+          }
+        }
+      }
+    }
+  }
+
   .treatments {
     background: rgba(255,255,0,.1);
     text-align: center;

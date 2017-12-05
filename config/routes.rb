@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :blogs
   resources :reviews
+  resources :notifications
 
   namespace :admin do
     devise_for :users, controllers: {

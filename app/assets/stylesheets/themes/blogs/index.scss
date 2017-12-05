@@ -4,7 +4,11 @@
   border-bottom: 1px solid $lightgray;
 
   .highlight-h2 {
-    padding-left: 20px;
+    margin-left: 40px;
+    padding-left: 10px;
+    font-size: 24px;
+    color: $graytext;
+    border-left: 3px solid #4990E2;
   }
 
   .container {
@@ -28,6 +32,56 @@
     .title-en {
       margin-left: 15px;
       margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    .blog {
+      border-bottom: 1px solid $searchBarGray;
+      padding: 13px 0;
+      overflow: auto;
+
+      .blog-thumb {
+        width: 95px;
+        height: 95px;
+        float: left;
+        background-position: center;
+        background-size: cover;
+        margin-right: 13px;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .blog-content {
+        height: 95px;
+        overflow: hidden;
+        padding: 7px 0;
+        h3.blog-title {
+          margin: 0px 0px 5px;
+          font-size: 16px;
+          @include text-ellipsis;
+          a {
+            color: $black;
+            &:hover, &:focus {
+              opacity: 0.7;
+              text-decoration: none;
+            }
+          }
+        }
+        .blog-description {
+          color: $gray;
+          font-size: 12px;
+          margin-bottom: 6px;
+        }
+        .blog-date {
+          color: $gray;
+          font-size: 13px;
+          height: 20px;
+        }
+      }
     }
   }
 }

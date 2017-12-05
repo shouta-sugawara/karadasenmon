@@ -24,7 +24,6 @@
 //= require plugins/colors.min.js
 //= require plugins/emoticons.min.js
 //= require plugins/entities.min.js
-//= require plugins/file.min.js
 //= require plugins/font_family.min.js
 //= require plugins/font_size.min.js
 //= require plugins/fullscreen.min.js
@@ -41,4 +40,3 @@
 //= require plugins/save.min.js
 //= require plugins/table.min.js
 //= require plugins/url.min.js
-//= require plugins/video.min.js

@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
+    @notifications = Notification.published
   end
 
   def diagnosis
