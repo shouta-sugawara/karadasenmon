@@ -1,5 +1,93 @@
 @import 'loader';
 
+a {
+	text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.bluebar {
+  padding-left: 10px;
+  font-size: 24px;
+  color: $graytext;
+  border-left: 3px solid #4990E2;
+}
+
+.grayhead {
+  font-size: 28px;
+  color: $graytext;
+  position: relative;
+  text-align: center;
+  margin: 30px 0 40px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.grayhead:after {
+  background: #969696;
+  content: '';
+  width: 60px;
+  height: 8px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.whitehead {
+  font-size: 28px;
+  color: white;
+  position: relative;
+  text-align: center;
+  margin: 30px 0 40px;
+  letter-spacing: 6px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.whitehead:after {
+  background: white;
+  content: '';
+  width: 60px;
+  height: 8px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.flow-chart {
+  .steps {
+    .step {
+      border-bottom: 1px solid $lightgray;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+
+      .number {
+        text-align: center;
+        vertical-align: middle;
+        height: 100%;
+        font-size: 20px;
+      }
+
+      .content {
+        .title {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .step:last-child {
+      border-style: none;
+    }
+  }
+}
+
 #top-page {
   #top-img {
     position:relative;
@@ -61,12 +149,8 @@
     align-content: center;
     padding-bottom: 20px;
 
-    h2 {
+    .bluebar {
       margin-left: 5%;
-      padding-left: 10px;
-      font-size: 24px;
-      color: $graytext;
-      border-left: 3px solid #4990E2;
     }
     .box {
       margin: auto;
