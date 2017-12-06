@@ -25,7 +25,7 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  # config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -46,13 +46,16 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :info
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
+  config.logger = Logger.new("log/production.log", 3, 10 * 1024 * 1024)
+  config.logger = Logger.new("log/sidekiq.log", 3, 10 * 1024 * 1024)
+  config.logger = Logger.new("log/unicorn.log", 3, 10 * 1024 * 1024)
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -76,4 +79,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.active_job.queue_adapter = :sidekiq
+
+  config.action_mailer.default_url_options = { host: '127.0.0.1' }
+
+  Rails.application.routes.default_url_options[:host] = 'karadasenmon.site'
 end
