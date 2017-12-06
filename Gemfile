@@ -40,7 +40,6 @@ gem 'capistrano-sidekiq', '= 0.10.0'
 
 gem 'sitemap_generator'
 gem 'whenever', :require => false
-gem 'mechanize'
 gem 'sitemap_generator', group: %w(production)
 
 group :development, :test do
