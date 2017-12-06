@@ -90,8 +90,6 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
-    domain_name (0.5.20170404)
-      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     excon (0.59.0)
     execjs (2.7.0)
@@ -255,8 +253,6 @@ GEM
     formatador (0.2.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    http-cookie (1.0.3)
-      domain_name (~> 0.5)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     inflecto (0.0.2)
@@ -277,15 +273,6 @@ GEM
       mini_mime (>= 0.1.1)
     material_icons (2.2.1)
       railties (>= 3.2)
-    mechanize (2.7.5)
-      domain_name (~> 0.5, >= 0.5.1)
-      http-cookie (~> 1.0)
-      mime-types (>= 1.17.2)
-      net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (~> 2.5, >= 2.5.2)
-      nokogiri (~> 1.6)
-      ntlm-http (~> 0.1, >= 0.1.1)
-      webrobots (>= 0.0.9, < 0.2)
     method_source (0.9.0)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
@@ -296,15 +283,12 @@ GEM
     minitest (5.10.3)
     multi_json (1.12.2)
     mysql2 (0.4.10)
-    net-http-digest_auth (1.4.1)
-    net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.2.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     normalize-rails (3.0.3)
-    ntlm-http (0.1.1)
     orm_adapter (0.5.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -410,9 +394,6 @@ GEM
     turbolinks-source (5.0.3)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.4)
     unicorn (5.3.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
@@ -423,7 +404,6 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    webrobots (0.1.2)
     whenever (0.10.0)
       chronic (>= 0.6.3)
     will_paginate (3.1.6)
@@ -459,7 +439,6 @@ DEPENDENCIES
   jpmobile
   jquery-rails
   material_icons
-  mechanize
   mini_magick
   mysql2
   normalize-rails (~> 3.0, >= 3.0.3)
