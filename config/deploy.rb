@@ -16,6 +16,8 @@ set :linked_dirs, %w{log}
 
 set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 
+set :unicorn_service, -> { "unicorn_#{fetch(:application)}" }
+
 namespace :deploy do
   desc "Install everything onto the server"
   task :install do
