@@ -11,6 +11,8 @@ set :rails_env, :production
 set :bundle_binstubs, nil
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/shared public/uploads node_modules}
 
+set :unicorn_service, -> { "unicorn_#{fetch(:application)}" }
+
 role :app, %w{ubuntu@160.16.144.7}
 role :web, %w{ubuntu@160.16.144.7}
 role :db, %w{ubuntu@160.16.144.7}
