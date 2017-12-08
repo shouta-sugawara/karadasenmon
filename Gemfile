@@ -38,6 +38,8 @@ gem 'capistrano-bundler'
 gem 'capistrano-npm'
 gem 'capistrano-sidekiq', '= 0.10.0'
 
+gem 'sidekiq'
+
 gem 'sitemap_generator'
 gem 'whenever', :require => false
 gem 'sitemap_generator', group: %w(production)
