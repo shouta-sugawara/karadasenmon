@@ -13,18 +13,22 @@
           <ul>
             <% @reviews.each do |r| %>
               <li class="review">
-                <%= link_to '', review_path(r.id), style: "background-image: url(#{r.image})", class: 'review-thumb'%>
-                <div class="review-content">
-                  <h3 class="review-title"><%= link_to (r.title.length > 26 ? r.title[0, 26] + "..." : r.title), review_path(r.id) %></h3>
-                  <p class="review-description"><%= strip_tags(r.content).length > 39 ? strip_tags(r.content)[0, 39] + "..." : strip_tags(r.content) %></p>
-                  <p class="review-date"><%= r.updated_at.strftime("%Y/%m/%d") %></p>
-                </div>
+                <%= link_to review_path(r.id) do %>
+                  <div class="review-thumb" style="background-image: url(<%= r.image %>)"></div>
+                  <div class="review-content">
+                    <h3 class="review-title"><%= r.title.length > 26 ? r.title[0, 26] + "..." : r.title %></h3>
+                    <p class="review-description"><%= strip_tags(r.content).length > 39 ? strip_tags(r.content)[0, 39] + "..." : strip_tags(r.content) %></p>
+                    <p class="review-date"><%= r.updated_at.strftime("%Y/%m/%d") %></p>
+                  </div>
+                <% end %>
               </li>
             <% end %>
           </ul>
         <% else %>
           <p>記事が見つかりませんでした。</p>
         <% end %>
+
+          <%= will_paginate @reviews %>
       </div>
     </div>
   </div>
