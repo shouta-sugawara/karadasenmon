@@ -30,3 +30,12 @@ $(function(){
 		}
 	});
 });
+
+$('nav ul li').hover(
+  function() {
+
+  },
+  function() {
+    
+  }
+);

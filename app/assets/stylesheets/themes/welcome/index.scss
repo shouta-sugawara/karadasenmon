@@ -1,5 +1,10 @@
 @import 'loader';
 
+p {
+	line-height: 27px;
+	font-size: 15px;
+}
+
 a {
 	text-decoration: none !important;
 }
@@ -110,13 +115,13 @@ a:hover {
       padding-top: 20px;
 
       .appeal-point {
-        text-align: center;
         max-width: 300px;
         margin: auto;
 
         .bg {
           background: black;
           position: relative;
+					overflow: hidden;
 
           img {
             width: 100%;
@@ -126,6 +131,10 @@ a:hover {
             object-fit: cover;
             background: black;
             opacity: .6;
+						-moz-transition: all 0.3s;
+						-o-transition: all 0.3s;
+						-webkit-transition: all 0.3s;
+						transition: all 0.3s;
           }
           .description {
             color: white;
@@ -141,6 +150,14 @@ a:hover {
             padding:0;
           }
         }
+
+				.bg:hover img {
+					transform: scale(1.1, 1.1);
+			    -webkit-transform: scale(1.1, 1.1);
+			    -moz-transform: scale(1.1, 1.1);
+			    -o-transform: scale(1.1, 1.1);
+					opacity: 0.4;
+				}
       }
     }
   }
@@ -184,14 +201,43 @@ a:hover {
     .treatment {
       padding-top: 10px;
       padding-bottom: 10px;
+			overflow: hidden;
 
-      img {
-        width: 200px;
-        height: 200px;
-        overflow: hidden;
-        object-fit: cover;
-        border-radius: 50%;
-      }
+			.treatment-img {
+				position: relative;
+				border-radius: 50%;
+
+				img {
+	        width: 200px;
+	        height: 200px;
+	        overflow: hidden;
+	        object-fit: cover;
+	        border-radius: 50%;
+					-moz-transition: all 0.3s;
+					-o-transition: all 0.3s;
+					-webkit-transition: all 0.3s;
+					transition: all 0.3s;
+	      }
+
+				.animation-text {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					-ms-transform: translate(-50%,-50%);
+					-webkit-transform: translate(-50%,-50%);
+					transform: translate(-50%,-50%);
+					margin:0;
+					padding:0;
+					font-size: 22px;
+					color: transparent;
+					text-shadow: 0 0 5px white;
+					-moz-transition: all 0.3s;
+					-o-transition: all 0.3s;
+					-webkit-transition: all 0.3s;
+					transition: all 0.3s;
+					opacity: 0;
+				}
+			}
 
       .treatment-name {
         color: $themeColor;
@@ -203,6 +249,21 @@ a:hover {
       .treatment-content {
         color: $graytext;
       }
+
+			a:hover img {
+				-webkit-filter: blur(3px) brightness(50%);
+				filter: blur(3px) brightness(50%);
+				transform: scale(1.1, 1.1);
+				-webkit-transform: scale(1.1, 1.1);
+				-moz-transform: scale(1.1, 1.1);
+				-o-transform: scale(1.1, 1.1);
+			}
+
+			a:hover .animation-text {
+				text-shadow: none;
+				color: white;
+				opacity: 1;
+			}
     }
   }
 
@@ -213,9 +274,14 @@ a:hover {
     background-size: cover;
 
     .layer-transparent {
-      background-color:		rgba(15,15,118,0.5);
+      background-color:		rgba(15,15,118,0.7);
 
       p {
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				margin: auto;
         color: white;
       }
     }

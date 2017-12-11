@@ -4,15 +4,11 @@
     <%= f.text_field :title, class: 'form-control', id:'title'  %>
   </div>
   <div class='field'>
+    <%= f.label :image, 'アイキャッチ画像URL' %>
+    <%= f.file_field :image %>
+  </div>
+  <div class='field'>
     <%= f.label :content, '内容' %>
-    <% unless @review.new_record? %>
-      <%= hidden_field_tag 'review_id', @review.id.to_s %>
-      <% if @review.draft? %>
-        <%= f.submit "プレビューを見る", class: 'btn btn-primary' %>
-      <% else %>
-        <%= f.submit "公開された記事を見る", class: 'btn btn-primary' %>
-      <% end %>
-    <% end %>
     <div class='form-status-holder' style='float: right;'></div>
     <%= f.text_area :content, id:'froala_editor' %>
     <p id="content-counter"></p>

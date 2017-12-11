@@ -1,8 +1,38 @@
 @import 'loader';
 
 #about {
-
   .top-image {
     background-image: asset-url('diagnosis.jpg') !important;
+  }
+
+  .introduction {
+
+    img {
+      overflow: hidden;
+      object-fit: fill;
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+
+  .image-slider {
+    .slick-slide {
+      margin: 0 10px;
+      position:relative;
+      width: 100%;
+      height: 300px;
+
+      img {
+        position:absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
   }
 }

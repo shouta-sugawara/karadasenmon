@@ -8,12 +8,12 @@
 
     <nav>
       <ul>
-        <li><%= link_to '診療案内', diagnosis_path %><p class="english">DIAGNOSIS</p></li>
-        <li><%= link_to '交通事故治療', traffic_accident_path %><p class="english">TRAFFIC ACCIDENT</p></li>
-        <li><%= link_to '当院のご案内', about_path %><p class="english">ABOUT</p></li>
-        <li><%= link_to '患者様の声', reviews_path %><p class="english">REVIEWS</p></li>
-        <li><%= link_to 'ブログ', blogs_path %><p class="english">BLOG</p></li>
-        <li><%= link_to '採用情報', recruitment_path %><p class="english">RECRUITMENT</p></li>
+        <li><%= link_to diagnosis_path do %>診療案内<span class="english">DIAGNOSIS</span><% end %></li>
+        <li><%= link_to traffic_accident_path do %>交通事故治療<span class="english">TRAFFIC ACCIDENT</span><% end %></li>
+        <li><%= link_to about_path do %>当院のご案内<span class="english">ABOUT</span><% end %></li>
+        <li><%= link_to reviews_path do %>患者様の声<span class="english">REVIEWS</span><% end %></li>
+        <li><%= link_to blogs_path do %>ブログ<span class="english">BLOG</span><% end %></li>
+        <li><%= link_to recruitment_path do %>採用情報<span class="english">RECRUITMENT</span><% end %></li>
       </ul>
       <div class="nav_icon">
         <span></span>
