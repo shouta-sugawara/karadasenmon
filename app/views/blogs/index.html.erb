@@ -26,9 +26,9 @@
             <% end %>
           </ul>
         <% else %>
-          <p>記事が見つかりませんでした。</p>
+          <p class="not-found">記事が見つかりませんでした。</p>
         <% end %>
-        
+
         <%= will_paginate @blogs %>
       </div>
     </div>
