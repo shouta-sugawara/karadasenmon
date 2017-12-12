@@ -111,17 +111,65 @@ a:hover {
 	  }
 
 		.top-image-1 {
-			filter: brightness(130%);
-		}
-
-		.top-image-2 {
 			filter: brightness(140%);
 		}
 
-		span {
-			position: absolute;
-			color: white;
-			font-size: 22px;
+		.top-image-3 {
+			filter: brightness(120%);
+		}
+
+		.messages {
+
+			.message {
+				position: absolute;
+				font-size: 26px;
+				line-height: 50px;
+			}
+
+			.message-1  {
+				color: black;
+				text-shadow: 2px 2px 2px gray;
+				top: 0;
+				left: 0;
+				top: 20%;
+				left: 10%;
+				-ms-transform: translate(-20%,-10%);
+				-webkit-transform: translate(-20%,-10%);
+				transform: translate(-20%,-10%);
+			}
+
+			.message-2 {
+				color: black;
+				text-shadow: 2px 2px 2px gray;
+				bottom: 10%;
+				right: 10%;
+				-ms-transform: translate(-10%,-10%);
+				-webkit-transform: translate(-10%,-10%);
+				transform: translate(-10%,-10%);
+			}
+
+			.message-3 {
+				text-align: center;
+				top: 50%;
+				left: 50%;
+				-ms-transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+
+				.message-3-title {
+					color: white;
+					text-shadow: 2px 2px 2px black;
+					font-size: 29px;
+					line-height: 45px;
+				}
+
+				.message-3-content {
+					color: white;
+					text-shadow: 2px 2px 2px black;
+					font-size: 20px;
+					line-height: 28px;
+				}
+			}
 		}
   }
 
