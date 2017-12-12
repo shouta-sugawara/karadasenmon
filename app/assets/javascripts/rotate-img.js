@@ -15,8 +15,8 @@ $(function(){
 
 function resizeTopImage() {
   var screenWidth = document.documentElement.clientWidth;
-  var properHeight = screenWidth * (7/16);
-  if (screenWidth * (7/16) < 550) {
+  var properHeight = screenWidth * (2/3);
+  if (properHeight < 550) {
     document.getElementById('top-img').style.height = properHeight + "px";
   }
 }
