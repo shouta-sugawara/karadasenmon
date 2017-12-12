@@ -203,7 +203,7 @@
         ul{
           padding-top: 0;
           background-color: $themeColor;
-          opacity: 0.8;
+          opacity: 0.9;
           -webkit-flex-direction: column;
           flex-direction: column;
           position: absolute;
@@ -220,6 +220,7 @@
             margin: auto;
             text-align: center;
             border-left: none !important;
+            color: white;
           }
 
           li:last-child{
