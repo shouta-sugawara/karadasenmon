@@ -202,7 +202,8 @@
 
         ul{
           padding-top: 0;
-          background-color: rgba(255, 255, 255, .8);
+          background-color: $themeColor;
+          opacity: 0.8;
           -webkit-flex-direction: column;
           flex-direction: column;
           position: absolute;
