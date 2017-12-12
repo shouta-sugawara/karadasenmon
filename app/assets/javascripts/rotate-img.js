@@ -1,5 +1,5 @@
-
 $(function(){
+    resizeTopImage();
     $('#top-img .images img:gt(0)').hide();
     $('#top-img .messages .message:gt(0)').hide();
     setInterval(function(){
@@ -11,4 +11,16 @@ $(function(){
          .end().appendTo('#top-img .messages');
        },
       6000);
+});
+
+function resizeTopImage() {
+  var screenWidth = document.documentElement.clientWidth;
+  var properHeight = screenWidth * (7/16);
+  if (screenWidth * (7/16) < 550) {
+    document.getElementById('top-img').style.height = properHeight + "px";
+  }
+}
+
+$(window).resize(function() {
+  resizeTopImage();
 });
