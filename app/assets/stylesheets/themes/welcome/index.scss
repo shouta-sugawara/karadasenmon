@@ -124,6 +124,10 @@ a:hover {
 				position: absolute;
 				font-size: 26px;
 				line-height: 50px;
+
+				  @include bp(mobile) {
+						display: none;
+					}
 			}
 
 			.message-1  {
