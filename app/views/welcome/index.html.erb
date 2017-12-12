@@ -1,8 +1,30 @@
 <div id="top-page">
   <div id="top-img">
-    <%= image_tag 'demo.jpg' %>
-    <%= image_tag 'demo2.jpg' %>
-    <%= image_tag 'demo3.jpg' %>
+    <div class="images">
+      <%= image_tag 'top-image-1.jpg', class: "top-image-1" %>
+      <%= image_tag 'top-image-2.jpg', class: "top-image-2" %>
+      <%= image_tag 'demo3.jpg' %>
+    </div>
+    <span></span>
+  </div>
+
+  <div class="notifications">
+    <div class="container">
+      <div class="row">
+        <h2 class="bluebar">お知らせ</h2>
+        <div class="box">
+          <ul>
+            <% @notifications.each do |n| %>
+             <% if n.has_content %>
+              <li><span class="date"><%= n.updated_at.strftime("%Y/%m/%d") %></span><%= link_to n.title, notification_path(n.id), class: "notification-title" %></li>
+             <% else %>
+              <li><span class="date"><%= n.updated_at.strftime("%Y/%m/%d") %></span><span class="notification-title"><%= n.title %></span></li>
+             <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="about-clinic">
@@ -40,25 +62,6 @@
             <p>Ｊ３のプロサッカーチーム「ブラウブリッツ秋田」と提携をしており、ユース年代へのメディカルサポート・トレーナーサポート、
               秋田県選抜国体少年サッカーのトレーナーなど、地域の皆様の縁の下の力持ちになるべく努力しております。</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="notifications">
-    <div class="container">
-      <div class="row">
-        <h2 class="bluebar">お知らせ</h2>
-        <div class="box">
-          <ul>
-            <% @notifications.each do |n| %>
-             <% if n.has_content %>
-              <li><span class="date"><%= n.updated_at.strftime("%Y/%m/%d") %></span><%= link_to n.title, notification_path(n.id), class: "notification-title" %></li>
-             <% else %>
-              <li><span class="date"><%= n.updated_at.strftime("%Y/%m/%d") %></span><span class="notification-title"><%= n.title %></span></li>
-             <% end %>
-            <% end %>
-          </ul>
         </div>
       </div>
     </div>
@@ -231,5 +234,7 @@
 </div>
 
 <script>
-    new WOW().init();
+    new WOW({
+      offset: 200,
+    }).init();
 </script>

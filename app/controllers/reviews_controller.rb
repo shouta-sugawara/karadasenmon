@@ -6,9 +6,6 @@ class ReviewsController < ApplicationController
   end
 
   def show
-    if @review.published?
-      redirect_to review_path(@review)
-    end
   end
 
   private
