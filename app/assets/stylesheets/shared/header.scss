@@ -226,6 +226,16 @@
           li:last-child{
             border-right: none;
           }
+
+          a {
+            color: white;
+          }
+
+          li:nth-child(2) {
+            a {
+              color: #e29b49;
+            }
+          }
         }
 
         .nav_icon,
