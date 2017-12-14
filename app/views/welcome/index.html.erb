@@ -6,11 +6,17 @@
       <%= image_tag 'top-image-3.jpg', class: "top-image-3" %>
     </div>
     <div class="messages">
-      <div class="message message-1">早くよくなること、根本改善へのこだわり。<br/>生涯健康・脱介護を目指した治療。<br/>にこにこグループは地域の皆様の健康に貢献します。</div>
+      <div class="message message-1">
+        <% if browser.device.mobile? || browser.device.tablet? %>
+          早くよくなること、根本改善へのこだわり。<br/>生涯健康・脱介護を目指した治療。<br/>
+        <% else %>
+          早くよくなること、根本改善へのこだわり。<br/>生涯健康・脱介護を目指した治療。<br/>にこにこグループは地域の皆様の健康に貢献します。
+        <% end %>
+      </div>
       <div class="message message-2">患者様とのコミュニケーションを大切にし<br/>オーダーメイドの治療を行います。</div>
       <div class="message message-3"><span class="message-3-title">すべてのアスリートに輝きを</span><br/>
         <% if browser.device.mobile? || browser.device.tablet? %>
-        <span class="message-3-content">にこにこグループはＪ３のプロサッカーチーム「ブラウブリッツ秋田」と提携しており<br/>メディカルサポート・トレーナーサポートを行っています。</span>
+        <span class="message-3-content">にこにこグループは<br/>Ｊ３のプロサッカーチーム「ブラウブリッツ秋田」とトレーナー提携をしております。</span>
         <% else %>
           <span class="message-3-content">にこにこグループはＪ３のプロサッカーチーム「ブラウブリッツ秋田」と提携しており、メディカルサポート・トレーナーサポートを行っています。<br/>
             アマチュアからプロスポーツ選手まで、パファーマンスが上がったとご高評いただいております。</span>
