@@ -1,6 +1,13 @@
 @import 'loader';
 
 #footer {
+  margin-top:-80px;
+  padding-top:80px;
+
+  @include bp(mobile) {
+    margin-top:-40px;
+    padding-top:40px;
+  }
 
   .clinics {
     .clinic {

@@ -71,6 +71,26 @@
         font-size: 15px;
         color: $navGrayText;
         margin: 10px 40px 0 auto;
+
+        .reservation:after {
+          content: "\f098";
+          padding-left: 5px;
+          font-family: FontAwesome;
+          margin-right: 10px;
+          font-size: 20px;
+          position: relative;
+          top: 1px;
+        }
+
+        .access:after {
+          content: "\f05a";
+          padding-left: 5px;
+          font-family: FontAwesome;
+          font-size: 20px;
+          color: $themeColor;
+          position: relative;
+          top: 1px;
+        }
       }
 
       @include bp(mobile) {
@@ -276,7 +296,7 @@
 
 @include bp(pc) {
   #header.smaller {
-   background-color: rgba(255,255,255,0.85);
+   background-color: rgba(255,255,255,0.95);
 
    #site-logo {
       img {

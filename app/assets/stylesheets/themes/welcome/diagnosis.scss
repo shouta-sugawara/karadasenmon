@@ -15,6 +15,11 @@
     .top-image-title {
       margin: 20px 20px;
       font-weight: normal;
+
+      @include bp(mobile) {
+        margin: 17px 17px;
+        font-size: 18px;
+      }
     }
 
     .title-en {
