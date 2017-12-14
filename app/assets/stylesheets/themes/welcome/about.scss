@@ -11,6 +11,8 @@
       overflow: hidden;
       object-fit: fill;
       width: 100%;
+      max-width: 250px;
+      display: block;
       height: auto;
       max-height: 100%;
     }
