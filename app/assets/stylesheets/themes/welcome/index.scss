@@ -280,6 +280,9 @@ a:hover {
   .notifications {
     align-content: center;
     padding-bottom: 20px;
+		@include bp(mobile) {
+			padding-bottom: 0;
+		}
 
     .bluebar {
       margin-left: 5%;
