@@ -5,7 +5,7 @@ p {
 	font-size: 15px;
 
 	@include bp(mobile) {
-		font-size: 13px;
+		font-size: 14px;
 	}
 }
 
@@ -13,12 +13,16 @@ h2 {
 	font-size: 28px;
 
 	@include bp(mobile) {
-		font-size: 22px !important;
+		font-size: 24px !important;
 	}
 }
 
 h3 {
+	font-size: 26px;
 
+	@include bp(mobile) {
+		font-size: 22px !important;
+	}
 }
 
 a {
@@ -31,7 +35,6 @@ a:hover {
 
 .bluebar {
   padding-left: 10px;
-  font-size: 24px;
   color: $graytext;
   border-left: 3px solid #4990E2;
 }
@@ -328,6 +331,11 @@ a:hover {
 					-o-transition: all 0.3s;
 					-webkit-transition: all 0.3s;
 					transition: all 0.3s;
+
+					@include bp(mobile) {
+						height: 150px;
+						height: 150px;
+					}
 	      }
 
 				.animation-text {
@@ -355,6 +363,10 @@ a:hover {
         padding-top: 10px;
         font-size: 20px;
         font-weight: bold;
+
+				@include bp(mobile) {
+					font-size: 18px;
+				}
       }
 
       .treatment-content {
