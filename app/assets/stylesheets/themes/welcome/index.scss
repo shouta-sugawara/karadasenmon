@@ -285,7 +285,12 @@ a:hover {
 		}
 
     .bluebar {
+			font-size: 20px;
       margin-left: 5%;
+			@include bp(mobile) {
+				font-size: 18px;
+				margin-top: 0;
+			}
     }
     .box {
       margin: auto;
