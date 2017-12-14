@@ -53,4 +53,15 @@
       }
     }
   }
+
+  .links {
+    .link-item {
+      display: inline-block;
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
