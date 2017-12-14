@@ -5,12 +5,27 @@
     <p class="title-en">BLOG</p>
   </div>
 
-  <div class="blogs">
+  <div class="blog">
     <div class="container">
-      <div class="row">
-        <h2 class="highlight-h2">新着ブログ一覧</h2>
+      <div class="blog-title">
+        <h1><%= @blog.title %></h1>
+      </div>
+
+      <div class="blog-date">
+        <span class="cat-tag">にこにこBLOG</span>
+        <span class="date"><%= @blog.updated_at.strftime("%Y/%m/%d")  %></span>
+      </div>
+
+      <% if !@blog.image.blank? %>
+        <div class='eyecatch'>
+          <%= image_tag @blog.image %>
+        </div>
+      <% end %>
+
+      <div class="blog-content">
         <%= @blog.content.try(:html_safe) %>
       </div>
+
     </div>
   </div>
 </div>

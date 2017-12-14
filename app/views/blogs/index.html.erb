@@ -7,12 +7,12 @@
 
   <div class="blogs">
     <div class="container">
-      <div class="row">
-        <h2 class="bluebar">新着ブログ一覧</h2>
-        <% if @blogs.present? %>
-          <ul>
-            <% @blogs.each do |b| %>
-              <li class="blog">
+      <h2 class="bluebar">新着ブログ一覧</h2>
+      <% if @blogs.present? %>
+        <ul class="row">
+          <% @blogs.each do |b| %>
+            <li class="blog col-md-4 col-sm-6 col-xs-12">
+              <div class="bg">
                 <%= link_to blog_path(b.id) do %>
                   <div class="blog-thumb" style="background-image: url(<%= b.image %>)"></div>
                   <div class="blog-content">
@@ -22,15 +22,15 @@
                     <p class="blog-date"><%= b.updated_at.strftime("%Y/%m/%d") %></p>
                   </div>
                 <% end %>
-              </li>
-            <% end %>
-          </ul>
-        <% else %>
-          <p class="not-found">記事が見つかりませんでした。</p>
-        <% end %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p class="not-found">記事が見つかりませんでした。</p>
+      <% end %>
 
-        <%= will_paginate @blogs %>
-      </div>
+      <%= will_paginate @blogs %>
     </div>
   </div>
 </div>

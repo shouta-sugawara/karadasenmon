@@ -30,32 +30,22 @@
   .links {
     .link-item {
       display: inline-block;
-      width: 33%;
-      padding: 0 2% 3% 2%;
       text-align: center;
 
       img {
         width: 100%;
       }
     }
-
-    .second-line {
-      padding: 0 5% 3% 5%;
-    }
-
-    .qr {
-      padding: 0 7% 3% 7%;
-    }
   }
 
   .copyright {
     text-align: center;
-    padding: 10px 0;
-    font-size: 12px;
+    padding: 3px 0;
     margin-top: 1px solid $lightgray;
     color: white;
     background-color: $themeColor;
     p {
+      font-size: 9px;
       margin: 0;
     }
   }

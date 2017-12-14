@@ -1,9 +1,10 @@
 <div id="header">
   <div class="header-content">
     <div id="site-logo">
-      <%= link_to root_path do %>
+      <%= link_to root_path, class: "link-to-root" do %>
         <%= image_tag 'logo.jpg' %><h1>にこにこ鍼灸整骨院</h1>
       <% end %>
+      <%= link_to "#", class: "link-to-access" do %><span class="reservation">お問い合わせ</span><span class="access">アクセス／店舗案内</span><% end %>
     </div>
 
     <nav>
@@ -14,6 +15,7 @@
         <li><%= link_to reviews_path do %>患者様の声<span class="english">REVIEWS</span><% end %></li>
         <li><%= link_to blogs_path do %>ブログ<span class="english">BLOG</span><% end %></li>
         <li><%= link_to recruitment_path do %>採用情報<span class="english">RECRUITMENT</span><% end %></li>
+        <li><%= link_to "#" do %>ご予約・アクセス<% end %></li>
       </ul>
       <div class="nav_icon">
         <span class="nav-icon-bar"></span>

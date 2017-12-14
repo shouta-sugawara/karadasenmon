@@ -14,10 +14,13 @@ $(function(){
 });
 
 function resizeTopImage() {
-  var screenWidth = document.documentElement.clientWidth;
-  var properHeight = screenWidth * (2/3);
-  if (properHeight < 550) {
-    document.getElementById('top-img').style.height = properHeight + "px";
+  debugger;
+  if (document.body.dataset.controller == "welcome" && document.body.dataset.action == "index") {
+    var screenWidth = document.documentElement.clientWidth;
+    var properHeight = screenWidth * (2/3);
+    if (properHeight < 550) {
+      document.getElementById('top-img').style.height = properHeight + "px";
+    }
   }
 }
 
