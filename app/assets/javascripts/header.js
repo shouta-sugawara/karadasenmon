@@ -29,6 +29,10 @@ $(function(){
       }
 		}
 	});
+
+  $("#access-btn").on("click", function() {
+		$(".nav_icon").click();
+	});
 });
 
 $('nav ul li').hover(
@@ -36,6 +40,6 @@ $('nav ul li').hover(
 
   },
   function() {
-    
+
   }
 );

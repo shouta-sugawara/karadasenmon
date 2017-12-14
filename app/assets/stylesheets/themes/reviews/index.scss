@@ -27,11 +27,21 @@
     .title-ja {
       margin: 20px 20px;
       font-weight: normal;
+
+      @include bp(mobile) {
+        margin: 13px 13px;
+        font-size: 18px !important;
+      }
     }
 
     .title-en {
       margin-left: 15px;
       margin-bottom: 0;
+
+      @include bp(mobile) {
+        margin-left: 10px;
+        font-size: 12px;
+      }
     }
   }
 
