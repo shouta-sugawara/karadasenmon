@@ -39,7 +39,6 @@
 }
 
 #diagnosis {
-
   .top-image {
     background-image: asset-url('diagnosis.jpg') !important;
   }
@@ -51,17 +50,16 @@
       margin: auto;
       margin-bottom: 20px;
 
+      @include bp(mobile) {
+        font-size: 13px;
+        width: 100%;
+      }
 
       th, td {
         text-align: center;
         padding-top: 15px;
         padding-bottom: 15px;
         border: 1px solid $lightgray;
-      }
-
-      @include bp(mobile) {
-        font-size: 13px;
-        width: 100%;
       }
 
       thead {
@@ -104,39 +102,24 @@
       tr {
         border: 1px solid #C9C9C9;
 
-        th {
+        th, td {
           text-align: center;
-          background: $lightGrayBg;
+          padding: 12px;
           font-weight: bold;
           font-size: 15px;
           vertical-align: middle;
-          padding: 12px;
           border-bottom: 1px solid #C9C9C9;
-          white-space: nowrap;
           width: 50%;
+
           @include bp(mobile) {
             font-weight: normal;
+            font-size: 14px;
           }
         }
 
-        td {
-          text-align: center;
-          padding: 12px;
-          border-bottom: 1px solid #C9C9C9;
+        th {
+          background: $lightGrayBg;
           font-size: 15px;
-          font-weight: bold;
-          vertical-align: top;
-          overflow: hidden;
-          width: 50%;
-          @include bp(mobile) {
-            font-weight: normal;
-          }
-        }
-
-        @include bp(mobile) {
-          th,td {
-            font-size: 15px;
-          }
         }
       }
     }
