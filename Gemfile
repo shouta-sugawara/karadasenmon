@@ -17,7 +17,6 @@ gem 'fog'
 gem 'rmagick'
 gem 'mini_magick'
 gem 'fastimage'
-gem 'wysiwyg-rails'
 
 gem 'devise'
 
