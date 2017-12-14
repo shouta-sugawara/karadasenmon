@@ -22,7 +22,8 @@
 <% end %>
 
 <script type="text/javascript">
-  $(function() {
+$.getScript("https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.3/js/froala_editor.min.js",
+  function() {
     $('#froala_editor').froalaEditor({
       // Set the image upload URL.
       imageUploadURL: '/admin/blogs/upload_image',
