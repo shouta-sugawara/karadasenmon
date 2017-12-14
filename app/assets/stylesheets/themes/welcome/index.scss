@@ -117,9 +117,11 @@ a:hover {
         vertical-align: middle;
         height: 100%;
         font-size: 20px;
+				background-color: red;
       }
 
       .content {
+				background-color: blue;
         .title {
           font-size: 18px;
         }
