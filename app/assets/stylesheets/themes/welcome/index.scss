@@ -289,8 +289,11 @@ a:hover {
       border: 1px solid $lightgray;
       overflow: scroll;
       width: 90%;
-      height: 200px;
+      max-height: 200px;
       -webkit-overflow-scrolling: touch;
+			@include bp(mobile) {
+				border: none;
+			}
 
       ul {
         list-style: none;
@@ -300,6 +303,9 @@ a:hover {
         li {
           padding: 5px;
           border-bottom: 1px dotted $lightgray;
+					@include bp(mobile) {
+						border-bottom: 1px solid $lightgray;
+					}
 
           .notification-title {
             padding-left: 15px;
