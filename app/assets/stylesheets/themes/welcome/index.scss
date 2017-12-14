@@ -225,6 +225,9 @@ a:hover {
 			margin-bottom: 20px;
 			padding-bottom: 5px;
 			// background: linear-gradient(transparent 60%, $themeColorLight 0%);
+			@include bp(mobile) {
+				font-size: 22px !important;
+			}
 		}
 
     .appeal-points {
