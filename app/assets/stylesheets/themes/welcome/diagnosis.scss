@@ -62,10 +62,6 @@
       @include bp(mobile) {
         font-size: 13px;
         width: 100%;
-
-        th,td {
-          padding: 0 5px !important;
-        }
       }
 
       thead {
@@ -80,10 +76,6 @@
         td:last-child {
           border-color: $lightgray $lightgray $lightgray white;
         }
-      }
-
-      tbody {
-
       }
     }
   }
@@ -106,7 +98,7 @@
       margin: auto;
 
       @include bp(mobile) {
-        margin: auto;
+        width: 100%;
       }
 
       tr {
@@ -122,6 +114,9 @@
           border-bottom: 1px solid #C9C9C9;
           white-space: nowrap;
           width: 50%;
+          @include bp(mobile) {
+            font-weight: normal;
+          }
         }
 
         td {
@@ -133,6 +128,9 @@
           vertical-align: top;
           overflow: hidden;
           width: 50%;
+          @include bp(mobile) {
+            font-weight: normal;
+          }
         }
 
         @include bp(mobile) {
