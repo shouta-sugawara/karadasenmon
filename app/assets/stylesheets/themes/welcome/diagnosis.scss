@@ -88,7 +88,13 @@
     }
 
     h3 {
+      margin-top: 30px;
       margin-left: 10%;
+      @include bp(mobile) {
+        border-left: none;
+        padding: 0;
+        margin-left: 0;
+      }
     }
 
     table {
@@ -127,6 +133,11 @@
 
   .visit-treatment {
     background: rgba(255,255,0,.1);
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
   }
 
   .feature {
