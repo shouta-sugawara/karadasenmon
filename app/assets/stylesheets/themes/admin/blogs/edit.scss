@@ -1,5 +1,5 @@
 @import 'loader';
 
-.fr-box .fr-wrapper > div[z-index="9999"] {
+.fr-box .fr-wrapper div:first-child {
   opacity: 0;
 }
