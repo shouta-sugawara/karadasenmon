@@ -184,10 +184,10 @@
         position: relative;
         cursor: pointer;
         top: 50%;
-				left: -20%;
-				-ms-transform: translate(-20%,-50%);
-				-webkit-transform: translate(-20%,-50%);
-				transform: translate(-20%,-50%);
+				left: 50%;
+				-ms-transform: translate(-50%,-50%);
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
       }
 
       .nav-icon-text {
