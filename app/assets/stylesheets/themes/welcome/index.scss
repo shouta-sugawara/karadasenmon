@@ -164,32 +164,24 @@ a:hover {
 				position: absolute;
 				font-size: 26px;
 				line-height: 50px;
-
-				  @include bp(mobile) {
-						display: none;
-					}
+				@include bp(mobile) {
+					font-size: 18px;
+					line-height: 25px;
+				}
 			}
 
 			.message-1  {
 				color: black;
 				text-shadow: 2px 2px 2px gray;
-				top: 0;
-				left: 0;
-				top: 20%;
-				left: 10%;
-				-ms-transform: translate(-20%,-10%);
-				-webkit-transform: translate(-20%,-10%);
-				transform: translate(-20%,-10%);
+				bottom: 5%;
+				left: 5%;
 			}
 
 			.message-2 {
 				color: black;
 				text-shadow: 2px 2px 2px gray;
-				bottom: 10%;
-				right: 10%;
-				-ms-transform: translate(-10%,-10%);
-				-webkit-transform: translate(-10%,-10%);
-				transform: translate(-10%,-10%);
+				bottom: 5%;
+				right: 5%;
 			}
 
 			.message-3 {
@@ -205,6 +197,9 @@ a:hover {
 					text-shadow: 2px 2px 2px black;
 					font-size: 29px;
 					line-height: 45px;
+					@include bp(mobile) {
+						display: none;
+					}
 				}
 
 				.message-3-content {
@@ -212,6 +207,11 @@ a:hover {
 					text-shadow: 2px 2px 2px black;
 					font-size: 20px;
 					line-height: 28px;
+					
+					@include bp(mobile) {
+						font-size: 18px;
+						line-height: 25px;
+					}
 				}
 			}
 		}

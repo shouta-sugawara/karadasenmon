@@ -48,6 +48,7 @@ GEM
       sass (>= 3.3.4)
     bootstrap-will_paginate (1.0.0)
       will_paginate
+    browser (2.2.0)
     builder (3.2.3)
     capistrano (3.4.1)
       i18n
@@ -416,6 +417,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.5)
   bootstrap-will_paginate
+  browser (~> 2.2.0)
   capistrano (~> 3.4.0)
   capistrano-bundler
   capistrano-npm
