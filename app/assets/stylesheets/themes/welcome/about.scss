@@ -55,12 +55,24 @@
   }
 
   .links {
+    .clearfix {
+      @include bp(mobile) {
+        display: none;
+      }
+    }
+
     .link-item {
-      display: inline-block;
       text-align: center;
+      margin-bottom: 10px;
 
       img {
         width: 100%;
+      }
+    }
+
+    .qr {
+      img {
+        width: 60%;
       }
     }
   }
