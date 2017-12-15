@@ -80,8 +80,11 @@
         padding: 7px 0;
         h3.review-title {
           margin: 0px 0px 5px;
-          font-size: 16px;
+          font-size: 16px !important;
           @include text-ellipsis;
+          @include bp(mobile) {
+      			font-size: 16px !important;
+      		}
           a {
             color: $black;
             &:hover, &:focus {

@@ -1,6 +1,8 @@
 @import 'loader';
 
 #blog-show {
+  border-bottom: 1px solid $lightgray;
+
   .container {
     border-left: 1px solid $lightgray;
     border-right: 1px solid $lightgray;
@@ -62,13 +64,33 @@
     }
 
     .blog-content {
-
       h2 {
-
+      font-size: 18px !important;
+      font-weight: bold;
+      color: $darkgray;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #41BAAE;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      margin-top: 30px;
+      line-height: 25px;
+        @include bp(mb){
+          font-size: 14px !important;
+          line-height: 30px;
+          letter-spacing: 0.3px;
+        }
       }
 
       h3 {
-
+        font-size: 16px !important;
+        color: $darkgray;
+        letter-spacing: 0.3px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        margin-top: 30px;
+        @include bp(mb){
+          font-size: 13px !important;
+        }
       }
     }
   }
