@@ -43,7 +43,7 @@
     background-image: asset-url('diagnosis.jpg') !important;
   }
 
-  .time-table {
+  #time-table {
     table {
       font-size: 18px;
       width: 80%;
@@ -78,11 +78,11 @@
     }
   }
 
-  .flow-of-treatment {
+  #flow-of-treatment {
     background: rgba(67,135,233,.1);
   }
 
-  .price {
+  #price {
     @include bp(mobile) {
       text-align: center;
     }
@@ -131,7 +131,7 @@
     }
   }
 
-  .visit-treatment {
+  #visit-treatment {
     background: rgba(255,255,0,.1);
 
     h3 {
@@ -140,7 +140,7 @@
     }
   }
 
-  .feature {
+  #feature {
     background-image: asset-url('hospitality.jpg') !important;
     background-position: center;
     background-repeat: no-repeat;

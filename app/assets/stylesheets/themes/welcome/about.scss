@@ -5,8 +5,7 @@
     background-image: asset-url('about-image.jpg') !important;
   }
 
-  .introduction {
-
+  #introduction {
     img {
       overflow: hidden;
       object-fit: fill;
@@ -19,7 +18,20 @@
     }
   }
 
-  .image-slider {
+  #trainer-tie-up {
+    img {
+      overflow: hidden;
+      object-fit: fill;
+      width: 100%;
+      max-width: 250px;
+      display: block;
+      margin: auto;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+
+  #image-slider {
     margin-bottom: 20px;
     .slick-slide {
       margin: 0 10px;
@@ -34,7 +46,7 @@
     }
   }
 
-  .trainer {
+  #trainer-dispatch {
     background-image: asset-url('soccer-img.jpg') !important;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,7 +66,7 @@
     }
   }
 
-  .links {
+  #links {
     .clearfix {
       @include bp(mobile) {
         display: none;

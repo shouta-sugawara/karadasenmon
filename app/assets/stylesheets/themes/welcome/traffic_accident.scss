@@ -6,7 +6,7 @@
     background-image: asset-url('traffic-accident.jpg') !important;
   }
 
-  .price {
+  #price {
     table {
       font-size: 18px;
       width: 80%;
@@ -43,11 +43,11 @@
     }
   }
 
-  .flow-of-accident {
+  #flow-of-accident {
     background: rgba(255,255,0,.1);
   }
 
-  .suggest-treatment {
+  #suggest-treatment {
     background-image: asset-url('muchiuchi.jpg') !important;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@
     }
   }
 
-  .car-insurance {
+  #car-insurance {
     background-image: asset-url('handshake-before-car.png') !important;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@
     }
   }
 
-  .case-of-uninsured {
+  #case-of-uninsured {
     background: rgba(144,238,144,.5);
   }
 }

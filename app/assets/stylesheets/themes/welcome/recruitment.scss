@@ -6,7 +6,7 @@
     background-image: asset-url('recruitment.jpg') !important;
   }
 
-  .staff-recruitment {
+  #staff-recruitment {
 
     .youtube {
       text-align: center;
@@ -16,7 +16,7 @@
         padding-bottom: 56.25%;
         height:0px;
         position: relative;
-  
+
         iframe{
           position: absolute;
           top: 0;
@@ -28,7 +28,7 @@
     }
   }
 
-  .recruitment-contents {
+  #recruitment-contents {
     background: rgba(67,135,233,.1);
   }
 }

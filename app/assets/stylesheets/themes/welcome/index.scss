@@ -158,7 +158,7 @@ a:hover {
 			filter: brightness(120%);
 		}
 
-		.messages {
+		#messages {
 
 			.message {
 				position: absolute;
@@ -217,7 +217,7 @@ a:hover {
 		}
   }
 
-  .about-clinic {
+  #about-clinic {
 
 		.principle {
 			margin-top: 25px;
@@ -277,7 +277,7 @@ a:hover {
     }
   }
 
-  .notifications {
+  #notifications {
     align-content: center;
     padding-bottom: 20px;
 		@include bp(mobile) {
@@ -334,7 +334,7 @@ a:hover {
     }
   }
 
-  .treatments {
+  #treatments {
     background: rgba(255,255,0,.1);
     text-align: center;
 
@@ -416,7 +416,7 @@ a:hover {
     }
   }
 
-  .sports-treatment {
+  #sports-treatment {
     background-image: asset-url('sports-bg.jpg') !important;
     background-position: center;
     background-repeat: no-repeat;
@@ -436,7 +436,7 @@ a:hover {
     }
   }
 
-  .f-questions {
+  #f-questions {
     .question {
 
       padding-top: 10px;

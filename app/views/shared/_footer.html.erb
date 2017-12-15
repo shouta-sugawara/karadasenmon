@@ -1,5 +1,5 @@
 <div id="footer">
-  <div class="clinics">
+  <div id="clinics">
     <div class="container">
       <div class="row">
         <h2 class="grayhead">グループ整骨院のご案内</h2>
@@ -58,7 +58,46 @@
     </div>
   </div>
 
-  <div class="copyright">
+  <div id="sitemap">
+    <div class="container">
+      <ul>
+        <li class="category"><%= link_to root_path do %>HOME<% end %></li>
+        <li class="category"><%= link_to diagnosis_path do %>診療案内<% end %></li>
+        <li class="sub-category">
+          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'first-time') do %>はじめての方へ<% end %>
+          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'time-table') do %>診療受付時間<% end %>
+          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'price') do %>料金のご案内<% end %>
+          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'flow-of-treatment') do %>施術の流れ<% end %>
+          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'visit-treatment') do %>訪問マッサージ<% end %>
+          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'feature') do %>患者様一人ひとりに寄り添った治療を<% end %>
+        </li>
+        <li class="category"><%= link_to traffic_accident_path do %>交通事故治療<% end %></li>
+        <li class="sub-category">
+          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'price') do %>治療料金<% end %>
+          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'flow-of-accident') do %>施術の流れ<% end %>
+          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'suggest-treatment') do %>怪我の自覚症状が無くても診察を<% end %>
+          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'car-insurance') do %>自賠責保険<% end %>
+          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'consolation-money') do %>治療費と慰謝料<% end %>
+          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'case-of-uninsured') do %>保険が適用されないケース<% end %>
+        </li>
+        <li class="category"><%= link_to about_path do %>当院のご案内<% end %></li>
+        <li class="sub-category">
+          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'introduction') do %>代表挨拶<% end %>
+          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-tie-up') do %>トレーナー提携<% end %>
+          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-dispatch') do %>トレーナー派遣<% end %>
+          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'links') do %>外部リンク<% end %>
+        </li>
+        <li class="category"><%= link_to reviews_path do %>患者様の声<% end %></li>
+        <li class="category"><%= link_to blogs_path do %>ブログ<% end %></li>
+        <li class="sub-category"><%= link_to recruitment_path do %>採用情報<% end %>
+          <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'staff-recruitment') do %>スタッフ募集<% end %>
+          <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'recruitment-contents') do %>求人内容<% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="copyright">
     <p>Copyright にこにこグループ整骨院  All Rights Reserved. 無断転載禁止</p>
   </div>
 </div>
