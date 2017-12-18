@@ -1,0 +1,29 @@
+@import 'loader';
+
+#cases {
+  border-bottom: 1px solid $lightgray;
+
+  .container {
+    border-left: 1px solid $lightgray;
+    border-right: 1px solid $lightgray;
+  }
+
+  .top-title {
+    border: 1px solid $lightgray;
+    border-top:0;
+    background-color:	rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+
+    .title-ja {
+      margin: 20px 20px;
+      font-weight: normal;
+
+      @include bp(mobile) {
+        margin: 13px 13px;
+        font-size: 18px !important;
+      }
+    }
+  }
+}
