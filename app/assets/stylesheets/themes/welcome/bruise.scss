@@ -26,4 +26,14 @@
       }
     }
   }
+
+  img {
+    overflow: hidden;
+    object-fit: fill;
+    width: 100%;
+    display: block;
+    margin: auto;
+    height: auto;
+    max-height: 100%;
+  }
 }
