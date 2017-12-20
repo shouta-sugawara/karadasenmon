@@ -14,7 +14,7 @@
           <% @reviews.each do |r| %>
             <li class="review">
               <%= link_to review_path(r.id) do %>
-                <div class="review-thumb" style="background-image: url(<%= r.image %>)"></div>
+                <div class="review-thumb" style="background-image: url(<%= asset_path "hito_icon.png" %>)"></div>
                 <div class="review-content">
                   <h3 class="review-title"><%= r.title.length > 26 ? r.title[0, 26] + "..." : r.title %></h3>
                   <p class="review-description"><%= strip_tags(r.content).length > 39 ? strip_tags(r.content)[0, 39] + "..." : strip_tags(r.content) %></p>

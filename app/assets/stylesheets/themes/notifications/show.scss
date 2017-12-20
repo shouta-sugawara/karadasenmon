@@ -1,0 +1,98 @@
+@import 'loader';
+
+#notification-show {
+  border-bottom: 1px solid $lightgray;
+
+  .container {
+    border-left: 1px solid $lightgray;
+    border-right: 1px solid $lightgray;
+  }
+
+  .top-title {
+    border: 1px solid $lightgray;
+    border-top:0;
+    background-color:	rgba(255,255,255,0.9);
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+
+    .title-ja {
+      margin: 20px 20px;
+      font-weight: normal;
+    }
+
+    .title-en {
+      margin-left: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  .notification {
+
+    img {
+      max-width: 100%;
+      max-height: 400px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .notification-title {
+      color: $themeColor;
+      margin: 20px 0;
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    .notification-date {
+      padding-bottom: 20px;
+      border-bottom: solid 2px #eee;
+
+      .cat-tag {
+        background-color: $themeColor;
+        font-size: 12px;
+        line-height: 1em;
+        display: inline-block;
+        padding: 4px 6px;
+        color: white;
+      }
+    }
+
+    .eyecatch {
+      margin-top: 20px;
+    }
+
+    .notification-content {
+
+      h2 {
+      font-size: 18px !important;
+      font-weight: bold;
+      color: $darkgray;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $themeColor;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      margin-top: 30px;
+      line-height: 25px;
+        @include bp(mb){
+          font-size: 14px !important;
+          line-height: 30px;
+          letter-spacing: 0.3px;
+        }
+      }
+
+      h3 {
+        font-size: 16px !important;
+        color: $darkgray;
+        letter-spacing: 0.3px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        margin-top: 30px;
+        @include bp(mb){
+          font-size: 13px !important;
+        }
+      }
+    }
+  }
+}

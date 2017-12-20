@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @notifications = Notification.published
+    @notifications = Notification.published.order(updated_at: :desc).limit(30)
   end
 
   def diagnosis
