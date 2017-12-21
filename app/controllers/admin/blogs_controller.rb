@@ -54,7 +54,7 @@ class Admin::BlogsController < Admin::BaseController
         file_name = "#{SecureRandom.urlsafe_base64}#{ext}"
         path = Rails.root.join("public/uploads/froala/", file_name)
         File.open(path, "wb") {|f| f.write(params[:file].read)}
-        view_file = Rails.env.production? ? DOMAIN + "uploads/froala/" + file_name : DOMAIN + "uploads/froala/" + file_name
+        view_file = Rails.env.production? ? DOMAIN + "uploads/froala/" + file_name : "http://localhost:3000/" + "uploads/froala/" + file_name
         render :json => {:link => view_file}.to_json
       else
         render :text => {:link => nil}.to_json

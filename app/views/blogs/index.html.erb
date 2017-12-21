@@ -23,7 +23,7 @@
                   )"></div>
                   <div class="blog-content">
                     <span class="cat-tag">にこにこBLOG</span>
-                    <h3 class="blog-title"><%= b.title %>) %></h3>
+                    <h3 class="blog-title"><%= b.title %></h3>
                     <p class="blog-description"><%= strip_tags(b.content).length > 39 ? strip_tags(b.content)[0, 39] + "..." : strip_tags(b.content) %></p>
                     <p class="blog-date"><%= b.updated_at.strftime("%Y/%m/%d") %></p>
                   </div>

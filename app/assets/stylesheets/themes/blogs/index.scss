@@ -9,7 +9,7 @@
 
   .bluebar {
     font-size: 28px;
-    border-left: 3px solid #41BAAE;
+    border-left: 3px solid $themeColor;
 
   	@include bp(mobile) {
   		font-size: 20px !important;

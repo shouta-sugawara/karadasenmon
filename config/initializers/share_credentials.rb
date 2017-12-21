@@ -1,1 +1,1 @@
-DOMAIN = "karadasenmon.com"
+DOMAIN = "http://karadasenmon.site/"
