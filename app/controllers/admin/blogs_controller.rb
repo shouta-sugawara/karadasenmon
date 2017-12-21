@@ -2,8 +2,6 @@ class Admin::BlogsController < Admin::BaseController
   skip_before_filter :verify_authenticity_token
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
-  IMAGE_EXT = [".jpg", ".jpeg", ".gif", ".png"]
-
   def index
     @blogs = Blog.all
   end
