@@ -22,14 +22,15 @@ Rails.application.routes.draw do
   resources :reviews
   resources :notifications
 
+  devise_for :users, controllers: {
+    sessions: "users/sessions",
+    passwords: "users/passwords",
+    registrations: "users/registrations",
+    unlocks: "users/unlocks",
+    confirmations: "users/confirmations"
+  }
+
   namespace :admin do
-    devise_for :users, controllers: {
-      sessions: "users/sessions",
-      passwords: "users/passwords",
-      registrations: "users/registrations",
-      unlocks: "users/unlocks",
-      confirmations: "users/confirmations"
-    }
     root to: "users#index"
 
     resources :users
