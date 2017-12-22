@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: [:show]
 
   def index
-    @reviews = Review.published.order(updated_at: :desc).paginate(page: params[:page], per_page: 18)
+    @reviews = Review.published.order(created_at: :desc).paginate(page: params[:page], per_page: 18)
   end
 
   def show

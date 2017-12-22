@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show]
 
   def index
-    @blogs = Blog.published.order(updated_at: :desc).paginate(page: params[:page], per_page: 18)
+    @blogs = Blog.published.order(created_at: :desc).paginate(page: params[:page], per_page: 18)
   end
 
   def show
