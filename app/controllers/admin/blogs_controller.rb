@@ -3,7 +3,7 @@ class Admin::BlogsController < Admin::BaseController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order(created_at: :desc).paginate(page: params[:page], per_page: 20)
   end
 
   def show

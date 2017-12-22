@@ -3,7 +3,7 @@ class Admin::ReviewsController < Admin::BaseController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
   def index
-    @reviews = Review.all
+    @reviews = Review.all.order(created_at: :desc).paginate(page: params[:page], per_page: 20)
   end
 
   def show

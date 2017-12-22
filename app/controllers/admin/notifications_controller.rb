@@ -3,7 +3,7 @@ class Admin::NotificationsController < Admin::BaseController
   before_action :set_notification, only: [:show, :edit, :update, :destroy]
 
   def index
-    @notifications = Notification.all
+    @notifications = Notification.all.order(created_at: :desc).paginate(page: params[:page], per_page: 20)
   end
 
   def show
