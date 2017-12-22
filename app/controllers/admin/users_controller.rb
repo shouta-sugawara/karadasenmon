@@ -7,7 +7,6 @@ class Admin::UsersController < Admin::BaseController
 
   def create
     user = User.create(user_params)
-    binding.pry
     redirect_to :back
   end
 
