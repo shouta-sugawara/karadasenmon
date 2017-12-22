@@ -4,11 +4,14 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def create
-    User.create(user_params)
+    binding.pry
+    user = User.create(user_params)
+    user.admin!
     redirect_to :back
   end
 
   def update
+    binding.pry
     User.find(params[:id]).update(user_params)
     redirect_to :back
   end
@@ -20,6 +23,6 @@ class Admin::UsersController < Admin::BaseController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :name, :profile_img_url)
+    params.require(:user).permit(:email, :password, :name)
   end
 end

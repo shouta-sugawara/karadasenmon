@@ -16,9 +16,11 @@
         <span class="date"><%= @blog.updated_at.strftime("%Y/%m/%d")  %></span>
       </div>
 
-      <div class='eyecatch'>
-        <%= image_tag @blog.image.blank? ? "/assets/logo_medium.png" : @blog.image %>
-      </div>
+      <% if !@blog.image.blank? %>
+        <div class='eyecatch'>
+          <%= image_tag @blog.image %>
+        </div>
+      <% end %>
 
       <div class="blog-content">
         <%= @blog.content.try(:html_safe) %>
