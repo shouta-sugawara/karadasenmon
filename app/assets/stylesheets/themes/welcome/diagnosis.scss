@@ -170,6 +170,13 @@
       }
     }
 
+    .red-text {
+      margin-left: 10%;
+      @include bp(mobile) {
+        margin: 0;
+      }
+    }
+
     table {
       width: 80%;
       margin: auto;
