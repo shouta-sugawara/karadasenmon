@@ -49,5 +49,7 @@ Rails.application.routes.draw do
         post :upload_image
       end
     end
+
+    get '/sitemap.xml.gz' => redirect('http://karadasenmon.site/sitemap.xml.gz')
   end
 end
