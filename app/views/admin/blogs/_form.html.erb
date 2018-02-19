@@ -1,5 +1,9 @@
 <%= form_for @blog, url: path, method: method, class: 'form-standard' do |f| %>
   <div class='field'>
+    <%= f.label :store_type, '店舗' %>
+    <%= f.select :store_type, Blog.store_types.keys.to_a, {}, class: 'form-control', id:'store_type' %>
+  </div>
+  <div class='field'>
     <%= f.label :title, 'タイトル' %>
     <%= f.text_field :title, class: 'form-control', id:'title'  %>
   </div>

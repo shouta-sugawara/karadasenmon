@@ -1,4 +1,5 @@
 <tr>
+  <td><%= blog.store_type %></td>
   <td><%= blog.title %></td>
   <td><%= strip_tags(blog.content).try(:first, 50) %></td>
   <td><%= blog.status %></td>

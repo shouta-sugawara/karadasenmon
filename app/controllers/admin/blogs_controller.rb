@@ -68,6 +68,6 @@ class Admin::BlogsController < Admin::BaseController
   end
 
   def blog_params
-    params.require(:blog).permit(:title, :content, :status, :image)
+    params.require(:blog).permit(:title, :content, :status, :store_type, :image)
   end
 end
