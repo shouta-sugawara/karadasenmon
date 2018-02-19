@@ -1,0 +1,34 @@
+<div id="review-index">
+
+  <div class="container top-title">
+    <h2 class="title-ja">患者様の声</h2>
+    <p class="title-en">REVIEWS</p>
+  </div>
+
+  <div class="reviews">
+    <div class="container">
+
+      <h2 class="bluebar">患者様の声一覧</h2>
+      <% if @reviews.present? %>
+        <ul>
+          <% @reviews.each do |r| %>
+            <li class="review">
+              <%= link_to sugawara_review_path(r.id) do %>
+                <div class="review-thumb" style="background-image: url(<%= asset_path "hito_icon.png" %>)"></div>
+                <div class="review-content">
+                  <h3 class="review-title"><%= r.title.length > 26 ? r.title[0, 26] + "..." : r.title %></h3>
+                  <p class="review-description"><%= strip_tags(r.content).length > 39 ? strip_tags(r.content)[0, 39] + "..." : strip_tags(r.content) %></p>
+                  <p class="review-date"><%= r.updated_at.strftime("%Y/%m/%d") %></p>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p class="not-found">記事が見つかりませんでした。</p>
+      <% end %>
+
+      <%= will_paginate @reviews %>
+    </div>
+  </div>
+</div>

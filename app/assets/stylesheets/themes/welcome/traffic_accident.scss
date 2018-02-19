@@ -41,6 +41,12 @@
         }
       }
     }
+
+    .red-text-traffic {
+      @include bp(pc) {
+        padding-left: 10%;
+      }
+    }
   }
 
   #flow-of-accident {

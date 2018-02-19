@@ -3,97 +3,201 @@
     <div class="container">
       <div class="row">
         <h2 class="grayhead">施術所のご案内</h2>
-          <div class="clinic col-md-6">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1535.0887252869818!2d140.1009575571055!3d39.690713979456156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8fc3a116faa707%3A0x805a876251b1ef16!2z44CSMDEwLTAwNjUg56eL55Sw55yM56eL55Sw5biC6Iyo5bO277yX5LiB55uu77yU4oiS77yS77yW!5e0!3m2!1sja!2sjp!4v1511833253532" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <table>
-            <tr>
-              <th>施術所</th>
-              <td>にこにこ鍼灸整骨院</td>
-            </tr>
-            <tr>
-              <th>アクセス</th>
-              <td>秋田県秋田市茨島7-4-26</td>
-            </tr>
-            <tr>
-              <th>予約・お問い合わせ</th>
-              <td><a href="tel:0188747530">018-874-7530</a></td>
-            </tr>
-            <tr>
-              <th>診療受付時間</th>
-              <td><p>【月〜金】</p><p>8：30～12：00</p><p>15:00〜19:00</p></td>
-            </tr>
-            <tr>
-              <th>定休日</th>
-              <td>土曜日・日曜日</td>
-            </tr>
-          </table>
-        </div>
 
-        <div class="clinic col-md-6">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1539.8626268003488!2d140.45778545710056!3d39.47553517948577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8fa14007194417%3A0xf795c134c981092!2z44CSMDE0LTAwMDUg56eL55Sw55yM5aSn5LuZ5biC6Iqx6aSo5p-z55S677yR4oiS77yT77yV!5e0!3m2!1sja!2sjp!4v1511833192361" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <table>
-            <tr>
-              <th>施術所</th>
-              <td>にこにこ整骨院</td>
-            </tr>
-            <tr>
-              <th>アクセス</th>
-              <td>秋田県大仙市花館柳町1-35</td>
-            </tr>
-            <tr>
-              <th>予約・お問い合わせ</th>
-              <td><a href="tel:0187735280 ">0187-73-5280</a></td>
-            </tr>
-            <tr>
-              <th>診療受付時間</th>
-              <td><p>【月〜金】</p><p>8：00～11：30</p><p>14:30〜18:30</p></td>
-            </tr>
-            <tr>
-              <th>定休日</th>
-              <td>土曜日・日曜日</td>
-            </tr>
-          </table>
-        </div>
+        <% if store_type == "default" %>
+          <div class="clinic col-md-6 col-md-offset-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1535.0887252869818!2d140.1009575571055!3d39.690713979456156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8fc3a116faa707%3A0x805a876251b1ef16!2z44CSMDEwLTAwNjUg56eL55Sw55yM56eL55Sw5biC6Iyo5bO277yX5LiB55uu77yU4oiS77yS77yW!5e0!3m2!1sja!2sjp!4v1511833253532" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <table>
+              <tr>
+                <th>施術所</th>
+                <td>にこにこ鍼灸整骨院</td>
+              </tr>
+              <tr>
+                <th>アクセス</th>
+                <td>秋田県秋田市茨島7-4-26</td>
+              </tr>
+              <tr>
+                <th>予約・お問い合わせ</th>
+                <td><a href="tel:0188747530">018-874-7530</a></td>
+              </tr>
+              <tr>
+                <th>診療受付時間</th>
+                <td><p>【月〜金】</p><p>8：30～12：00</p><p>15:00〜19:00</p></td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>土曜日・日曜日</td>
+              </tr>
+            </table>
+          </div>
+        <% elsif store_type == "niconico" %>
+          <div class="clinic col-md-6 col-md-offset-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1539.8626268003488!2d140.45778545710056!3d39.47553517948577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8fa14007194417%3A0xf795c134c981092!2z44CSMDE0LTAwMDUg56eL55Sw55yM5aSn5LuZ5biC6Iqx6aSo5p-z55S677yR4oiS77yT77yV!5e0!3m2!1sja!2sjp!4v1511833192361" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <table>
+              <tr>
+                <th>施術所</th>
+                <td>にこにこ整骨院</td>
+              </tr>
+              <tr>
+                <th>アクセス</th>
+                <td>秋田県大仙市花館柳町1-35</td>
+              </tr>
+              <tr>
+                <th>予約・お問い合わせ</th>
+                <td><a href="tel:0187735280 ">0187-73-5280</a></td>
+              </tr>
+              <tr>
+                <th>診療受付時間</th>
+                <td><p>【月〜金】</p><p>8：00～11：30</p><p>14:30〜18:30</p></td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>土曜日・日曜日</td>
+              </tr>
+            </table>
+          </div>
+        <% else %>
+          <div class="clinic col-md-6 col-md-offset-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12320.845417332384!2d140.4757144!3d39.4645537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb9bbfa36288564f!2z44CSMDE0LTAwMTQg56eL55Sw55yM5aSn5LuZ5biC5aSn5puy56aP5L2P55S677yW4oiS77yS77yQ!5e0!3m2!1sja!2sjp!4v1519019269599" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <table>
+              <tr>
+                <th>施術所</th>
+                <td>にこにこ整骨院</td>
+              </tr>
+              <tr>
+                <th>アクセス</th>
+                <td>秋田県大仙市花館柳町1-35</td>
+              </tr>
+              <tr>
+                <th>予約・お問い合わせ</th>
+                <td><a href="tel:0187735280 ">0187-63-8682</a></td>
+              </tr>
+              <tr>
+                <th>診療受付時間</th>
+                <td><p>【月〜金】</p><p>8：30～12：00</p><p>15:00〜19:00</p></td>
+                <td><p>【土】</p><p>8：30～12：00</p></td>
+              </tr>
+              <tr>
+                <th>定休日</th>
+                <td>日曜日</td>
+              </tr>
+            </table>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
 
   <div id="sitemap">
     <div class="container">
-      <ul>
-        <li class="category"><%= link_to root_path do %>HOME<% end %></li>
-        <li class="category"><%= link_to diagnosis_path do %>診療案内<% end %></li>
-        <li class="sub-category">
-          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'first-time') do %>はじめての方へ<% end %>
-          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'time-table') do %>診療受付時間<% end %>
-          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'price') do %>料金のご案内<% end %>
-          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'flow-of-treatment') do %>施術の流れ<% end %>
-          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'visit-treatment') do %>訪問マッサージ<% end %>
-          <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'feature') do %>患者様一人ひとりに寄り添った治療を<% end %>
-        </li>
-        <li class="category"><%= link_to traffic_accident_path do %>交通事故治療<% end %></li>
-        <li class="sub-category">
-          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'price') do %>治療料金<% end %>
-          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'flow-of-accident') do %>施術の流れ<% end %>
-          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'suggest-treatment') do %>怪我の自覚症状が無くても診察を<% end %>
-          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'car-insurance') do %>自賠責保険<% end %>
-          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'consolation-money') do %>治療費と慰謝料<% end %>
-          <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'case-of-uninsured') do %>保険が適用されないケース<% end %>
-        </li>
-        <li class="category"><%= link_to about_path do %>当院のご案内<% end %></li>
-        <li class="sub-category">
-          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'introduction') do %>代表挨拶<% end %>
-          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-tie-up') do %>トレーナー提携<% end %>
-          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-dispatch') do %>トレーナー派遣<% end %>
-          <%= link_to url_for(controller: :welcome, action: :about, anchor: 'links') do %>外部リンク<% end %>
-        </li>
-        <li class="category"><%= link_to reviews_path do %>患者様の声<% end %></li>
-        <li class="category"><%= link_to blogs_path do %>ブログ<% end %></li>
-        <li class="sub-category"><%= link_to recruitment_path do %>採用情報<% end %>
-          <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'staff-recruitment') do %>スタッフ募集<% end %>
-          <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'recruitment-contents') do %>求人内容<% end %>
-        </li>
-      </ul>
+
+      <% if store_type == "default" %>
+        <ul>
+          <li class="category"><%= link_to root_path do %>HOME<% end %></li>
+          <li class="category"><%= link_to diagnosis_path do %>診療案内<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'first-time') do %>はじめての方へ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'time-table') do %>診療受付時間<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'price') do %>料金のご案内<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'flow-of-treatment') do %>施術の流れ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'visit-treatment') do %>訪問マッサージ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'feature') do %>患者様一人ひとりに寄り添った治療を<% end %>
+          </li>
+          <li class="category"><%= link_to traffic_accident_path do %>交通事故治療<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'price') do %>治療料金<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'flow-of-accident') do %>施術の流れ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'suggest-treatment') do %>怪我の自覚症状が無くても診察を<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'car-insurance') do %>自賠責保険<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'consolation-money') do %>治療費と慰謝料<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'case-of-uninsured') do %>保険が適用されないケース<% end %>
+          </li>
+          <li class="category"><%= link_to about_path do %>当院のご案内<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'introduction') do %>代表挨拶<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-tie-up') do %>トレーナー提携<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-dispatch') do %>トレーナー派遣<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'links') do %>外部リンク<% end %>
+          </li>
+          <li class="category"><%= link_to reviews_path do %>患者様の声<% end %></li>
+          <li class="category"><%= link_to blogs_path do %>ブログ<% end %></li>
+          <li class="sub-category"><%= link_to recruitment_path do %>採用情報<% end %>
+            <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'staff-recruitment') do %>スタッフ募集<% end %>
+            <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'recruitment-contents') do %>求人内容<% end %>
+          </li>
+        </ul>
+      <% elsif store_type == "niconico" %>
+        <ul>
+          <li class="category"><%= link_to niconico_root_path do %>HOME<% end %></li>
+          <li class="category"><%= link_to niconico_diagnosis_path do %>診療案内<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'first-time') do %>はじめての方へ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'time-table') do %>診療受付時間<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'price') do %>料金のご案内<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'flow-of-treatment') do %>施術の流れ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'visit-treatment') do %>訪問マッサージ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'feature') do %>患者様一人ひとりに寄り添った治療を<% end %>
+          </li>
+          <li class="category"><%= link_to niconico_traffic_accident_path do %>交通事故治療<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'price') do %>治療料金<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'flow-of-accident') do %>施術の流れ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'suggest-treatment') do %>怪我の自覚症状が無くても診察を<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'car-insurance') do %>自賠責保険<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'consolation-money') do %>治療費と慰謝料<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'case-of-uninsured') do %>保険が適用されないケース<% end %>
+          </li>
+          <li class="category"><%= link_to niconico_about_path do %>当院のご案内<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'introduction') do %>代表挨拶<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-tie-up') do %>トレーナー提携<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-dispatch') do %>トレーナー派遣<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'links') do %>外部リンク<% end %>
+          </li>
+          <li class="category"><%= link_to niconico_reviews_path do %>患者様の声<% end %></li>
+          <li class="category"><%= link_to niconico_blogs_path do %>ブログ<% end %></li>
+          <li class="sub-category"><%= link_to recruitment_path do %>採用情報<% end %>
+            <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'staff-recruitment') do %>スタッフ募集<% end %>
+            <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'recruitment-contents') do %>求人内容<% end %>
+          </li>
+        </ul>
+      <% else %>
+        <ul>
+          <li class="category"><%= link_to sugawara_root_path do %>HOME<% end %></li>
+          <li class="category"><%= link_to sugawara_diagnosis_path do %>診療案内<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'first-time') do %>はじめての方へ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'time-table') do %>診療受付時間<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'price') do %>料金のご案内<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'flow-of-treatment') do %>施術の流れ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'visit-treatment') do %>訪問マッサージ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :diagnosis, anchor: 'feature') do %>患者様一人ひとりに寄り添った治療を<% end %>
+          </li>
+          <li class="category"><%= link_to sugawara_traffic_accident_path do %>交通事故治療<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'price') do %>治療料金<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'flow-of-accident') do %>施術の流れ<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'suggest-treatment') do %>怪我の自覚症状が無くても診察を<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'car-insurance') do %>自賠責保険<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'consolation-money') do %>治療費と慰謝料<% end %>
+            <%= link_to url_for(controller: :welcome, action: :traffic_accident, anchor: 'case-of-uninsured') do %>保険が適用されないケース<% end %>
+          </li>
+          <li class="category"><%= link_to sugawara_about_path do %>当院のご案内<% end %></li>
+          <li class="sub-category">
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'introduction') do %>代表挨拶<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-tie-up') do %>トレーナー提携<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'trainer-dispatch') do %>トレーナー派遣<% end %>
+            <%= link_to url_for(controller: :welcome, action: :about, anchor: 'links') do %>外部リンク<% end %>
+          </li>
+          <li class="category"><%= link_to sugawara_reviews_path do %>患者様の声<% end %></li>
+          <li class="category"><%= link_to sugawara_blogs_path do %>ブログ<% end %></li>
+          <li class="sub-category"><%= link_to recruitment_path do %>採用情報<% end %>
+            <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'staff-recruitment') do %>スタッフ募集<% end %>
+            <%= link_to url_for(controller: :welcome, action: :recruitment, anchor: 'recruitment-contents') do %>求人内容<% end %>
+          </li>
+        </ul>
+      <% end %>
+
     </div>
   </div>
 

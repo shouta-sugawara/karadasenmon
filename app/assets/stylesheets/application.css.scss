@@ -28,9 +28,9 @@
 }
 
 #wrapper {
-  margin-top: 135px;
+  margin-top: 163px;
   @include bp(mobile) {
-    margin-top: 50px;
+    margin-top: 0px;
   }
 
   .container {

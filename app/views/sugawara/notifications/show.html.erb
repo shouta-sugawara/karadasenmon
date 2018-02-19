@@ -1,0 +1,24 @@
+<div id="notification-show">
+
+  <div class="container top-title">
+    <h2 class="title-ja">お知らせ</h2>
+    <p class="title-en">NOTIFICATION</p>
+  </div>
+
+  <div class="notification">
+    <div class="container">
+      <div class="notification-title">
+        <h1><%= @notification.title %></h1>
+      </div>
+
+      <div class="notification-date">
+        <span class="cat-tag">お知らせ</span>
+        <span class="date"><%= @notification.updated_at.strftime("%Y/%m/%d")  %></span>
+      </div>
+
+      <div class="notification-content">
+        <%= @notification.content.try(:html_safe) %>
+      </div>
+    </div>
+  </div>
+</div>

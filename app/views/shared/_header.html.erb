@@ -1,22 +1,66 @@
 <div id="header">
   <div class="header-content">
     <div id="site-logo">
-      <%= link_to root_path, class: "link-to-root" do %>
-        <%= image_tag 'logo_medium.png' %><h1>にこにこ鍼灸整骨院</h1>
+      <% if store_type == "default" %>
+        <%= link_to root_path, class: "link-to-root" do %>
+          <%= image_tag 'logo_medium.png' %><h1>にこにこ鍼灸整骨院</h1>
+        <% end %>
+      <% elsif store_type == "niconico" %>
+        <%= link_to niconico_root_path, class: "link-to-root" do %>
+          <%= image_tag 'logo_medium.png' %><h1>にこにこ整骨院</h1>
+        <% end %>
+      <% else %>
+        <%= link_to sugawara_root_path, class: "link-to-root" do %>
+          <%= image_tag 'logo_medium.png' %><h1>すがわら整骨院</h1>
+        <% end %>
       <% end %>
-      <%= link_to "#footer", class: "link-to-access" do %><span class="reservation">お問い合わせ</span><span class="access">アクセス／店舗案内</span><% end %>
+
+      <div class="store-menu-pc">
+        <h3 class="store-title">口コミで評判！秋田県の整骨院</h3>
+        <div class="store-items">
+          <%= link_to root_path, class: "store-item" do %><p class="main">秋田市</p><p class="mini">茨島</p><% end %>
+          <%= link_to niconico_root_path, class: "store-item" do %><p class="main">大仙市</p><p class="mini">花館柳町</p><% end %>
+          <%= link_to sugawara_root_path, class: "store-item" do %><p class="main">大仙市</p><p class="mini">大曲福住町</p><% end %>
+        </div>
+      </div>
+
+      <%= link_to "#footer", class: "link-to-access" do %><p class="reservation">お問い合わせ</p><p class="access">アクセス／店舗案内</p><% end %>
     </div>
 
     <nav>
-      <ul>
-        <li><%= link_to diagnosis_path do %>診療案内<span class="english">DIAGNOSIS</span><% end %></li>
-        <li><%= link_to traffic_accident_path do %>交通事故治療<span class="english">TRAFFIC ACCIDENT</span><% end %></li>
-        <li><%= link_to about_path do %>当院のご案内<span class="english">ABOUT</span><% end %></li>
-        <li><%= link_to reviews_path do %>患者様の声<span class="english">REVIEWS</span><% end %></li>
-        <li><%= link_to blogs_path do %>ブログ<span class="english">BLOG</span><% end %></li>
-        <li><%= link_to recruitment_path do %>採用情報<span class="english">RECRUITMENT</span><% end %></li>
-        <li><%= link_to "#footer", id: "access-btn" do %>ご予約・アクセス<% end %></li>
-      </ul>
+
+      <% if store_type == "default" %>
+        <ul>
+          <li><%= link_to diagnosis_path do %>診療案内<span class="english">DIAGNOSIS</span><% end %></li>
+          <li><%= link_to traffic_accident_path do %>交通事故治療<span class="english">TRAFFIC ACCIDENT</span><% end %></li>
+          <li><%= link_to about_path do %>当院のご案内<span class="english">ABOUT</span><% end %></li>
+          <li><%= link_to reviews_path do %>患者様の声<span class="english">REVIEWS</span><% end %></li>
+          <li><%= link_to blogs_path do %>ブログ<span class="english">BLOG</span><% end %></li>
+          <li><%= link_to recruitment_path do %>採用情報<span class="english">RECRUITMENT</span><% end %></li>
+          <li><%= link_to "#footer", id: "access-btn" do %>ご予約・アクセス<% end %></li>
+        </ul>
+      <% elsif store_type == "niconico" %>
+        <ul>
+          <li><%= link_to niconico_diagnosis_path do %>診療案内<span class="english">DIAGNOSIS</span><% end %></li>
+          <li><%= link_to niconico_traffic_accident_path do %>交通事故治療<span class="english">TRAFFIC ACCIDENT</span><% end %></li>
+          <li><%= link_to niconico_about_path do %>当院のご案内<span class="english">ABOUT</span><% end %></li>
+          <li><%= link_to niconico_reviews_path do %>患者様の声<span class="english">REVIEWS</span><% end %></li>
+          <li><%= link_to niconico_blogs_path do %>ブログ<span class="english">BLOG</span><% end %></li>
+          <li><%= link_to niconico_recruitment_path do %>採用情報<span class="english">RECRUITMENT</span><% end %></li>
+          <li><%= link_to "#footer", id: "access-btn" do %>ご予約・アクセス<% end %></li>
+        </ul>
+      <% else %>
+        <ul>
+          <li><%= link_to sugawara_diagnosis_path do %>診療案内<span class="english">DIAGNOSIS</span><% end %></li>
+          <li><%= link_to sugawara_traffic_accident_path do %>交通事故治療<span class="english">TRAFFIC ACCIDENT</span><% end %></li>
+          <li><%= link_to sugawara_about_path do %>当院のご案内<span class="english">ABOUT</span><% end %></li>
+          <li><%= link_to sugawara_reviews_path do %>患者様の声<span class="english">REVIEWS</span><% end %></li>
+          <li><%= link_to sugawara_blogs_path do %>ブログ<span class="english">BLOG</span><% end %></li>
+          <li><%= link_to sugawara_recruitment_path do %>採用情報<span class="english">RECRUITMENT</span><% end %></li>
+          <li><%= link_to "#footer", id: "access-btn" do %>ご予約・アクセス<% end %></li>
+        </ul>
+      <% end %>
+
       <div class="nav_icon">
         <span class="nav-icon-bar"></span>
         <span class="nav-icon-bar"></span>
@@ -24,5 +68,14 @@
         <span class="nav-icon-text">MENU</span>
       </div>
     </nav>
+  </div>
+</div>
+
+<div class="store-menu-mb">
+  <h3 class="store-title">口コミで評判！秋田県の整骨院</h3>
+  <div class="store-items">
+    <%= link_to "#footer", class: "store-item" do %><p class="main">秋田市</p><p class="mini">茨島</p><% end %>
+    <%= link_to "#footer", class: "store-item" do %><p class="main">大仙市</p><p class="mini">花館柳町</p><% end %>
+    <%= link_to "#footer", class: "store-item" do %><p class="main">大仙市</p><p class="mini">大曲福住町</p><% end %>
   </div>
 </div>

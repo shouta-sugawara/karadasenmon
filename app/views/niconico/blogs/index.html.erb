@@ -1,0 +1,42 @@
+<div id="blog-index">
+
+  <div class="container top-title">
+    <h2 class="title-ja">ブログ</h2>
+    <p class="title-en">BLOG</p>
+  </div>
+
+  <div class="blogs">
+    <div class="container">
+      <h2 class="bluebar">新着ブログ一覧</h2>
+      <% if @blogs.present? %>
+        <ul class="row">
+          <% @blogs.each do |b| %>
+            <li class="blog col-md-4 col-sm-6 col-xs-12">
+              <div class="bg">
+                <%= link_to niconico_blog_path(b.id) do %>
+                  <div class="blog-thumb" style="background-image: url(
+                    <%= if b.image.present?
+                          b.image
+                        else
+                          asset_path "logo_medium.png"
+                        end%>
+                  )"></div>
+                  <div class="blog-content">
+                    <span class="cat-tag">にこにこBLOG</span>
+                    <h3 class="blog-title"><%= b.title %></h3>
+                    <p class="blog-description"><%= strip_tags(b.content).length > 39 ? strip_tags(b.content)[0, 39] + "..." : strip_tags(b.content) %></p>
+                    <p class="blog-date"><%= b.updated_at.strftime("%Y/%m/%d") %></p>
+                  </div>
+                <% end %>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p class="not-found">記事が見つかりませんでした。</p>
+      <% end %>
+
+      <%= will_paginate @blogs %>
+    </div>
+  </div>
+</div>

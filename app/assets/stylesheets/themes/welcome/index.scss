@@ -36,6 +36,27 @@ a:hover {
   text-decoration: none !important;
 }
 
+.button-layer {
+	text-align: center;
+
+	.reserv-access-button {
+		margin: 20px 0 20px 0;
+		font-size: 17px;
+		display: inline-block;
+	  padding: 0.3em 1em;
+	  text-decoration: none;
+	  color: $themeColor;
+	  border: solid 2px $themeColor;
+	  border-radius: 3px;
+	  transition: .4s;
+	}
+
+	.reserv-access-button:hover {
+	  background: $themeColor;
+	  color: white;
+	}
+}
+
 .bluebar {
   padding-left: 10px;
   color: $graytext;

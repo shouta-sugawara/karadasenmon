@@ -1,0 +1,31 @@
+<div id="review-show">
+
+  <div class="container top-title">
+    <h2 class="title-ja">患者様の声</h2>
+    <p class="title-en">REVIEWS</p>
+  </div>
+
+  <div class="review">
+    <div class="container">
+      <div class="review-title">
+        <h1><%= @review.title %></h1>
+      </div>
+
+      <div class="review-date">
+        <span class="cat-tag">患者様の声</span>
+        <span class="date"><%= @review.updated_at.strftime("%Y/%m/%d")  %></span>
+      </div>
+
+      <% if !@review.image.blank? %>
+        <div class='eyecatch'>
+          <%= image_tag @review.image %>
+        </div>
+      <% end %>
+
+      <div class="review-content">
+        <%= @review.content.try(:html_safe) %>
+      </div>
+
+    </div>
+  </div>
+</div>
